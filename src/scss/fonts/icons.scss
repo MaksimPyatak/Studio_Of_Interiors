@@ -1,0 +1,80 @@
+%ic {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class*="icons-"] {
+  &:before {
+    @extend %ic;
+    display: block;
+  }
+}
+
+._icon-Group:before {
+  content: "\e905";
+}
+.icon-left-arrowhead:before {
+  content: "\e900";
+}
+._icon-arrow-right:before {
+  content: "\e901";
+}
+._icon-book:before {
+  content: "\e902";
+}
+._icon-calc:before {
+  content: "\e903";
+}
+.icon-criss-cross:before {
+  content: "\e904";
+}
+._icon-cyrcle-white:before {
+  content: "\e906";
+}
+._icon-down-arrowhead:before {
+  content: "\e907";
+}
+._icon-Exit:before {
+  content: "\e908";
+}
+._icon-Facebook:before {
+  content: "\e909";
+}
+._icon-geotag:before {
+  content: "\e90a";
+}
+._icon-geotag-grey:before {
+  content: "\e90b";
+}
+._icon-left-arrowhead-blue:before {
+  content: "\e90f";
+}
+._icon-linkedin:before {
+  content: "\e910";
+}
+._icon-Plus:before {
+  content: "\e911";
+}
+._icon-right-arrowhead:before {
+  content: "\e912";
+}
+._icon-right-arrowhead-grey:before {
+  content: "\e913";
+}
+._icon-select-arrow:before {
+  content: "\e914";
+}
+._icon-send-request:before {
+  content: "\e915";
+}
+._icon-size:before {
+  content: "\e916";
+}
+._icon-twiter:before {
+  content: "\e917";
+}

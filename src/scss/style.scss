@@ -1,0 +1,40 @@
+@import "nullstyle";
+// Підключення шрифтів
+//&display=swap - додати при підключенні через плагін
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular);
+@import "fonts/fonts";
+@import "fonts/icons";
+
+//Те що часто використовується
+@import "often";
+
+body {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  background: #e5e5e5;
+  ._lock {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  max-width: 1440px;
+  min-height: 100%;
+  //  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #e5e5e5;
+}
+
+@import "header";
+
+main {
+  flex: 1 1 auto;
+}
+.first-section {
+  height: 744px;
+  background-image: url("@img/first-section/first-slide.png");
+}

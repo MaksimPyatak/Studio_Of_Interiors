@@ -1,0 +1,313 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: Adieu;
+  font-display: swap;
+  src: url("../fonts/Adieu-Regular.woff2") format("woff2"), url("../fonts/Adieu-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Freight Big Light Italic;
+  font-display: swap;
+  src: url("../fonts/Freight Big Light Italic.woff2") format("woff2"), url("../fonts/Freight Big Light Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: helveticaneue;
+  font-display: swap;
+  src: url("../fonts/helveticaneue.woff2") format("woff2"), url("../fonts/helveticaneue.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: HelveticaNeue Medium;
+  font-display: swap;
+  src: url("../fonts/HelveticaNeue Medium.woff2") format("woff2"), url("../fonts/HelveticaNeue Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+[class*=icons-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=icons-]:before {
+  display: block;
+}
+
+._icon-Group:before {
+  content: "\e905";
+}
+
+.icon-left-arrowhead:before {
+  content: "\e900";
+}
+
+._icon-arrow-right:before {
+  content: "\e901";
+}
+
+._icon-book:before {
+  content: "\e902";
+}
+
+._icon-calc:before {
+  content: "\e903";
+}
+
+.icon-criss-cross:before {
+  content: "\e904";
+}
+
+._icon-cyrcle-white:before {
+  content: "\e906";
+}
+
+._icon-down-arrowhead:before {
+  content: "\e907";
+}
+
+._icon-Exit:before {
+  content: "\e908";
+}
+
+._icon-Facebook:before {
+  content: "\e909";
+}
+
+._icon-geotag:before {
+  content: "\e90a";
+}
+
+._icon-geotag-grey:before {
+  content: "\e90b";
+}
+
+._icon-left-arrowhead-blue:before {
+  content: "\e90f";
+}
+
+._icon-linkedin:before {
+  content: "\e910";
+}
+
+._icon-Plus:before {
+  content: "\e911";
+}
+
+._icon-right-arrowhead:before {
+  content: "\e912";
+}
+
+._icon-right-arrowhead-grey:before {
+  content: "\e913";
+}
+
+._icon-select-arrow:before {
+  content: "\e914";
+}
+
+._icon-send-request:before {
+  content: "\e915";
+}
+
+._icon-size:before {
+  content: "\e916";
+}
+
+._icon-twiter:before {
+  content: "\e917";
+}
+
+body {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  background: #e5e5e5;
+}
+body ._lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  max-width: 1440px;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #e5e5e5;
+}
+
+.header {
+  width: 100%;
+  height: 96px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header__container {
+  max-width: 1314px;
+  padding: 0 5%;
+  margin: 0 auto;
+  box-sizing: content-box;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  flex: 1 1 15.3%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.header__menu {
+  height: 100%;
+  flex: 1 1 83.6%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 84.6%;
+  letter-spacing: 0.06em;
+}
+.menu__burger {
+  display: none;
+}
+.menu__body {
+  height: 100%;
+  width: 30.37%;
+}
+.menu__list {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__last-block {
+  width: 283px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__button {
+  width: auto;
+  padding: 17px 48px;
+  border: 1px solid rgba(253, 253, 253, 0.32);
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  color: inherit;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.first-section {
+  height: 744px;
+  background-image: url("../img/first-section/first-slide.png");
+}

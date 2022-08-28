@@ -3,10 +3,10 @@ import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();
 
 
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
 const swiper = new Swiper('.first-section__swiper', {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Scrollbar],
     // Optional parameters
     // direction: 'vertical',
     // loop: true,

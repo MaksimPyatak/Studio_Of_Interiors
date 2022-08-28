@@ -9,16 +9,23 @@
 //Те що часто використовується
 @import "often";
 
+@import '../../node_modules/swiper/swiper.scss';
+@import "../../node_modules/swiper/modules/navigation/navigation.scss";
+@import "../../node_modules/swiper/modules/pagination/pagination.scss";
+@import "../../node_modules/swiper/modules/scrollbar/scrollbar.scss";
+
 body {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 14px;
   color: #ffffff;
   background: #e5e5e5;
+
   ._lock {
     overflow: hidden;
   }
 }
+
 .wrapper {
   max-width: 1440px;
   min-height: 100%;
@@ -34,6 +41,7 @@ body {
 main {
   flex: 1 1 auto;
 }
+
 .first-section {
   height: 744px;
   background-image: url("@img/first-section/first-slide.png");

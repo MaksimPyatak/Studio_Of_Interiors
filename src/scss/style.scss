@@ -9,7 +9,7 @@
 //Те що часто використовується
 @import "often";
 
-@import '../../node_modules/swiper/swiper.scss';
+@import "../../node_modules/swiper/swiper.scss";
 @import "../../node_modules/swiper/modules/navigation/navigation.scss";
 @import "../../node_modules/swiper/modules/pagination/pagination.scss";
 @import "../../node_modules/swiper/modules/scrollbar/scrollbar.scss";
@@ -40,4 +40,189 @@ body {
 
 main {
   flex: 1 1 auto;
+}
+
+.first-section {
+  position: relative;
+  width: 100%;
+  height: 744px;
+  &__swiper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  &__swiper-wrapper {
+    height: 100%;
+  }
+
+  &__swiper-slide {
+    width: 85%;
+    height: 100%;
+  }
+
+  &__img-example {
+    height: 100%;
+    width: 100%;
+    img {
+      height: 100%;
+    }
+  }
+}
+.swiper-button-prev {
+  position: absolute;
+  z-index: 5;
+  top: 61.83%;
+  left: 69.9%;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.18%;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  &::after {
+    position: relative;
+    left: -31px;
+    font-size: 9px;
+  }
+}
+.swiper-button-next {
+  position: absolute;
+  z-index: 5;
+  top: 61.83%;
+  left: 85.53%;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.18%;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  &::after {
+    position: relative;
+    left: 10px;
+    font-size: 9px;
+  }
+}
+//.swiper-scrollbar {
+//  position: absolute;
+
+//  width: 186px;
+//  height: 1px;
+//  top: 61.83%;
+//  left: 72%;
+//}
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  z-index: 5;
+  top: 61.83%;
+  left: 72%;
+  width: 12.91%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.32);
+}
+.swiper-scrollbar-drag {
+  z-index: 5;
+  background: rgba(255, 255, 255);
+}
+
+.first-section {
+  &__slogan {
+    position: absolute;
+    width: 569px;
+    height: 122px;
+    left: 263px;
+    top: 279px;
+    z-index: 11;
+    font-size: 56px;
+    line-height: 121.43%;
+  }
+
+  &__discover-more {
+    @include discover-more;
+  }
+
+  &__data-box {
+    width: 634px;
+    position: absolute;
+    z-index: 11;
+    left: 64px;
+    top: 685px;
+    display: flex;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 118.18%;
+    letter-spacing: 0.06em;
+
+    .language-box {
+      @include box-language;
+    }
+    // flex: 1 1 37.37%;
+  }
+
+  &__location {
+    margin-left: 121px;
+    width: 117px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 1.15336px 1.22544px rgba(0, 0, 0, 0.2),
+      inset 0px -0.288339px 0.0720847px rgba(255, 255, 255, 0.23);
+    backdrop-filter: blur(2px);
+    border-radius: 8.70783px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__flag {
+    margin-left: 12px;
+    font-size: 10px;
+  }
+
+  &__city-list {
+    width: 77px;
+    margin-left: 6px;
+    background: none;
+    border: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11.18%;
+    letter-spacing: 0.06em;
+    color: inherit;
+  }
+
+  &__city-name {
+    color: black;
+  }
+
+  &__contacts {
+    width: 346px;
+    margin-left: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__phone {
+  }
+
+  &__phone-link {
+  }
+
+  &__email {
+  }
+
+  &__email-link {
+  }
+
+  &__column {
+  }
+
+  &__next {
+  }
+
+  &__next-link {
+  }
+
+  &__vertical-slogan {
+  }
 }

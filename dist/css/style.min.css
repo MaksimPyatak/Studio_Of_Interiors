@@ -113,22 +113,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-style: normal;
 }
-[class*=icons-]:before {
-  font-family: "icons";
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class*=icons-]:before {
-  display: block;
-}
-
-._icon-Group:before {
+.icon-Group:before {
   content: "\e905";
 }
 
@@ -136,15 +136,15 @@ h1, h2, h3, h4, h5, h6 {
   content: "\e900";
 }
 
-._icon-arrow-right:before {
+.icon-arrow-right:before {
   content: "\e901";
 }
 
-._icon-book:before {
+.icon-book:before {
   content: "\e902";
 }
 
-._icon-calc:before {
+.icon-calc:before {
   content: "\e903";
 }
 
@@ -152,63 +152,63 @@ h1, h2, h3, h4, h5, h6 {
   content: "\e904";
 }
 
-._icon-cyrcle-white:before {
+.icon-cyrcle-white:before {
   content: "\e906";
 }
 
-._icon-down-arrowhead:before {
+.icon-down-arrowhead:before {
   content: "\e907";
 }
 
-._icon-Exit:before {
+.icon-Exit:before {
   content: "\e908";
 }
 
-._icon-Facebook:before {
+.icon-Facebook:before {
   content: "\e909";
 }
 
-._icon-geotag:before {
+.icon-geotag:before {
   content: "\e90a";
 }
 
-._icon-geotag-grey:before {
+.icon-geotag-grey:before {
   content: "\e90b";
 }
 
-._icon-left-arrowhead-blue:before {
+.icon-left-arrowhead-blue:before {
   content: "\e90f";
 }
 
-._icon-linkedin:before {
+.icon-linkedin:before {
   content: "\e910";
 }
 
-._icon-Plus:before {
+.icon-Plus:before {
   content: "\e911";
 }
 
-._icon-right-arrowhead:before {
+.icon-right-arrowhead:before {
   content: "\e912";
 }
 
-._icon-right-arrowhead-grey:before {
+.icon-right-arrowhead-grey:before {
   content: "\e913";
 }
 
-._icon-select-arrow:before {
+.icon-select-arrow:before {
   content: "\e914";
 }
 
-._icon-send-request:before {
+.icon-send-request:before {
   content: "\e915";
 }
 
-._icon-size:before {
+.icon-size:before {
   content: "\e916";
 }
 
-._icon-twiter:before {
+.icon-twiter:before {
   content: "\e917";
 }
 
@@ -698,6 +698,7 @@ body ._lock {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 50;
 }
 .header__container {
   max-width: 1314px;
@@ -764,4 +765,183 @@ body ._lock {
 
 main {
   flex: 1 1 auto;
+}
+
+.first-section {
+  position: relative;
+  width: 100%;
+  height: 744px;
+}
+.first-section__swiper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.first-section__swiper-wrapper {
+  height: 100%;
+}
+.first-section__swiper-slide {
+  width: 85%;
+  height: 100%;
+}
+.first-section__img-example {
+  height: 100%;
+  width: 100%;
+}
+.first-section__img-example img {
+  height: 100%;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  z-index: 5;
+  top: 61.83%;
+  left: 69.9%;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.18%;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+.swiper-button-prev::after {
+  position: relative;
+  left: -31px;
+  font-size: 9px;
+}
+
+.swiper-button-next {
+  position: absolute;
+  z-index: 5;
+  top: 61.83%;
+  left: 85.53%;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.18%;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+.swiper-button-next::after {
+  position: relative;
+  left: 10px;
+  font-size: 9px;
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  z-index: 5;
+  top: 61.83%;
+  left: 72%;
+  width: 12.91%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.swiper-scrollbar-drag {
+  z-index: 5;
+  background: rgb(255, 255, 255);
+}
+
+.first-section__slogan {
+  position: absolute;
+  width: 569px;
+  height: 122px;
+  left: 263px;
+  top: 279px;
+  z-index: 11;
+  font-size: 56px;
+  line-height: 121.43%;
+}
+.first-section__discover-more {
+  z-index: 11;
+  position: absolute;
+  height: 13px;
+  top: 453px;
+  left: 263px;
+}
+.first-section__discover-more .discover-more__link {
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: inherit;
+  display: flex;
+  padding: 0 65px 0 16px;
+}
+.first-section__discover-more .discover-more__link::before, .first-section__discover-more .discover-more__link::after {
+  content: " ";
+  position: absolute;
+  top: 35%;
+  display: block;
+  width: 8px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.first-section__discover-more .discover-more__link::before {
+  position: absolute;
+  left: 0%;
+  width: 8px;
+  height: 1px;
+}
+.first-section__discover-more .discover-more__link::after {
+  position: absolute;
+  right: 0;
+  width: 56px;
+  height: 1px;
+}
+.first-section__data-box {
+  width: 634px;
+  position: absolute;
+  z-index: 11;
+  left: 64px;
+  top: 685px;
+  display: flex;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 118.18%;
+  letter-spacing: 0.06em;
+}
+.first-section__data-box .language-box {
+  width: 78px;
+  display: flex;
+  justify-content: space-between;
+  color: inherit;
+}
+.first-section__location {
+  margin-left: 121px;
+  width: 117px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 1.15336px 1.22544px rgba(0, 0, 0, 0.2), inset 0px -0.288339px 0.0720847px rgba(255, 255, 255, 0.23);
+  backdrop-filter: blur(2px);
+  border-radius: 8.70783px;
+  display: flex;
+  align-items: center;
+}
+.first-section__flag {
+  margin-left: 12px;
+  font-size: 10px;
+}
+.first-section__city-list {
+  width: 77px;
+  margin-left: 6px;
+  background: none;
+  border: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 11.18%;
+  letter-spacing: 0.06em;
+  color: inherit;
+}
+.first-section__city-name {
+  color: black;
+}
+.first-section__contacts {
+  width: 346px;
+  margin-left: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }

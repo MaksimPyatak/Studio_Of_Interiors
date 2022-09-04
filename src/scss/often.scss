@@ -21,3 +21,59 @@
   line-height: 13px;
   color: $color;
 }
+// Текст з двома лініями з двох боків -ТЕКСТ----
+//Додаємо в основний блок
+@mixin discover-more(
+  $color: inherit,
+  $background: rgba(255, 255, 255, 0.4),
+  $position: absolute,
+  $top: 453px,
+  $left: 263px
+) {
+  z-index: 11;
+  position: $position;
+  //width: 187px;
+  height: 13px;
+  top: $top;
+  left: $left;
+
+  .discover-more__link {
+    font-size: 10px;
+    line-height: 120%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color;
+    display: flex;
+    padding: 0 65px 0 16px;
+    &::before,
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 35%;
+      display: block;
+      width: 8px;
+      height: 1px;
+      background: $background;
+    }
+    &::before {
+      position: absolute;
+      left: 0%;
+      width: 8px;
+      height: 1px;
+    }
+    &::after {
+      position: absolute;
+      right: 0;
+      width: 56px;
+      height: 1px;
+    }
+  }
+}
+@mixin box-language(
+  $color: inherit,
+) {
+   width: 78px;
+   display: flex;
+   justify-content: space-between;
+   color: $color;
+}

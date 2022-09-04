@@ -1,93 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/head.html',{ "title":"Studio of interiors" })
+  @@include('html/head.html',{ "title":"Studio of interiors" })
 
-<body>
-  <div class="wrapper">
-    @@include('html/header.html',{})
-    <main>
-      <div class="first-section">
-        <div class="first-section__swiper swiper">
-          <div class="first-section__swiper-wrapper swiper-wrapper">
-            <!-- Slides -->
-            <div class="first-section__swiper-slide swiper-slide">
-              <div class="first-section__img-example">
-                <img src="@img/first-section/first-section-slide1.png" alt="" />
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html',{})
+      <main>
+        <div class="first-section">
+          <div class="first-section__swiper swiper">
+            <div class="first-section__swiper-wrapper swiper-wrapper">
+              <!-- Slides -->
+              <div class="first-section__swiper-slide swiper-slide">
+                <div class="first-section__img-example">
+                  <img
+                    src="@img/first-section/first-section-slide1.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="first-section__swiper-slide swiper-slide">
+                <div class="first-section__img-example">
+                  <img
+                    src="@img/first-section/first-section-slide2.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="first-section__swiper-slide swiper-slide">
+                <div class="first-section__img-example">
+                  <img
+                    src="@img/first-section/first-section-slide3.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="first-section__swiper-slide swiper-slide">
+                <div class="first-section__img-example">
+                  <img
+                    src="@img/first-section/first-section-slide4.png"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
-            <div class="first-section__swiper-slide swiper-slide">
-              <div class="first-section__img-example">
-                <img src="@img/first-section/first-section-slide2.png" alt="" />
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+            <h1 class="first-section__slogan">Thoughtful making of space</h1>
+            @@include('html/elements/discover-more.html',{"class":
+            "first-section__discover-more", "text": "Discover more"})
+            <div class="first-section__data-box">
+              @@include('html/elements/box-language.html',{"class":
+              "first-section__language-box"})
+              <div class="first-section__location">
+                <div class="first-section__flag icon-geotag"></div>
+                <select class="first-section__city-list">
+                  <option class="first-section__city-name">Berlin</option>
+                  <option class="first-section__city-name">London</option>
+                  <option class="first-section__city-name">Paris</option>
+                  <option class="first-section__city-name">Brussels</option>
+                </select>
+              </div>
+              <div class="first-section__contacts">
+                <div class="first-section__phone">
+                  <a class="first-section__phone-link" href="tel:+380983527547"
+                    >+380983527547</a
+                  >
+                </div>
+                <div class="first-section__email">
+                  <a
+                    class="first-section__email-link"
+                    href="mailto:info@gmail.com"
+                    >E: info@gmail.com</a
+                  >
+                </div>
               </div>
             </div>
-            <div class="first-section__swiper-slide swiper-slide">
-              <div class="first-section__img-example">
-                <img src="@img/first-section/first-section-slide3.png" alt="" />
-              </div>
+            <div class="first-section__next">
+              <a class="first-section__next-link" href="#">Next Project</a>
             </div>
-            <div class="first-section__swiper-slide swiper-slide">
-              <div class="first-section__img-example">
-                <img src="@img/first-section/first-section-slide4.png" alt="" />
-              </div>
+            <div class="first-section__vertical-slogan">
+              Perfect proportions
             </div>
           </div>
-          <!-- If we need pagination -->
-          <!-- <div class="swiper-pagination"></div> -->
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
         </div>
-        <div class="first-section__content">
-          <div class="first-section__container">
-            <div class="first-section__main-box">
-              <div class="first-section__title">
-                <h1 class="first-section__slogan">Thoughtful
-                  making of space</h1>
-                <div class="first-section__more">
-                  <a class="first-section__link-more" href="#">Discover more</a>
-                </div>
-              </div>
-              <div class="first-section__data-box">
-                @@include('html/elements/box-language.html',{"class": "first-section__language-box"})
-                <div class="first-section__location">
-                  <div class="first-section__flag"></div>
-                  <ul class="first-section__city-list">
-                    <li class="first-section__city-name">Berlin</li>
-                    <li class="first-section__city-name">London</li>
-                    <li class="first-section__city-name">Paris</li>
-                    <li class="first-section__city-name">Brussels</li>
-                  </ul>
-                  <div class="first-section__choice"></div>
-                </div>
-                <div class="first-section__contacts">
-                  <div class="first-section__phone">
-                    <a class="first-section__phone-link" href="tel:+380983527547">+380983527547</a>
-                  </div>
-                  <div class="first-section__email">
-                    <a class="first-section__email-link" href="mailto:info@gmail.com">E: info@gmail.com</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="first-section__column">
-              <div class="first-section__next">
-                <a class="first-section__next-link" href="#">Next Project</a>
-              </div>
-              <div class="first-section__vertical-slogan">
-                Perfect proportions
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    @@include('html/footer.html',{})
-  </div>
-  <script src="js/app.min.js"></script>
-</body>
-
+      </main>
+      @@include('html/footer.html',{})
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
 </html>

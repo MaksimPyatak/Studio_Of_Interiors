@@ -5,7 +5,7 @@ flsFunctions.isWebp();
 
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
-const swiper = new Swiper('.first-section__swiper', {
+export const swiper = new Swiper('.first-section__swiper', {
     modules: [Navigation, Pagination, Scrollbar],
     // Optional parameters
     // direction: 'vertical',
@@ -25,5 +25,51 @@ const swiper = new Swiper('.first-section__swiper', {
     // And if we need scrollbar
     scrollbar: {
         el: '.swiper-scrollbar',
+        dragSize: 89.91,
     },
+    slidesPerView: 'auto',
+    spaceBetween: 0, 
+});
+
+
+// Нумерація навігації Swiper
+
+const prevNomberSlide = document.querySelector('.swiper-button-prev');
+const nextNomberSlide = document.querySelector('.swiper-button-next');
+ 
+let nomberSlide;
+let prev;
+let next;
+
+window.onload = function () {
+   nomberSlide = swiper.activeIndex;
+   prev = nomberSlide;
+   if (prev < 10) {
+      prevNomberSlide.textContent = "0" + prev;
+   } else {
+      prevNomberSlide.textContent = prev;
+   };
+    
+   next = nomberSlide+2;
+   if (next < 10) {
+      nextNomberSlide.textContent = "0" + next;
+   } else {
+      nextNomberSlide.textContent = next;
+   }
+};
+swiper.on('slideChange', function () {
+   nomberSlide = swiper.activeIndex;
+   prev = nomberSlide;
+   if (prev < 10) {
+      prevNomberSlide.textContent = "0" + prev;
+   } else {
+      prevNomberSlide.textContent = prev;
+   };
+    
+   next = nomberSlide+2;
+   if (next < 10) {
+      nextNomberSlide.textContent = "0" + next;
+   } else {
+      nextNomberSlide.textContent = next;
+   }
 });

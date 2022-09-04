@@ -1,80 +1,79 @@
-%ic {
-  font-family: "icons";
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-[class*="icons-"] {
-  &:before {
-    @extend %ic;
-    display: block;
-  }
-}
 
-._icon-Group:before {
+.icon-Group:before {
   content: "\e905";
 }
 .icon-left-arrowhead:before {
   content: "\e900";
 }
-._icon-arrow-right:before {
+.icon-arrow-right:before {
   content: "\e901";
 }
-._icon-book:before {
+.icon-book:before {
   content: "\e902";
 }
-._icon-calc:before {
+.icon-calc:before {
   content: "\e903";
 }
 .icon-criss-cross:before {
   content: "\e904";
 }
-._icon-cyrcle-white:before {
+.icon-cyrcle-white:before {
   content: "\e906";
 }
-._icon-down-arrowhead:before {
+.icon-down-arrowhead:before {
   content: "\e907";
 }
-._icon-Exit:before {
+.icon-Exit:before {
   content: "\e908";
 }
-._icon-Facebook:before {
+.icon-Facebook:before {
   content: "\e909";
 }
-._icon-geotag:before {
+.icon-geotag:before {
   content: "\e90a";
 }
-._icon-geotag-grey:before {
+.icon-geotag-grey:before {
   content: "\e90b";
 }
-._icon-left-arrowhead-blue:before {
+.icon-left-arrowhead-blue:before {
   content: "\e90f";
 }
-._icon-linkedin:before {
+.icon-linkedin:before {
   content: "\e910";
 }
-._icon-Plus:before {
+.icon-Plus:before {
   content: "\e911";
 }
-._icon-right-arrowhead:before {
+.icon-right-arrowhead:before {
   content: "\e912";
 }
-._icon-right-arrowhead-grey:before {
+.icon-right-arrowhead-grey:before {
   content: "\e913";
 }
-._icon-select-arrow:before {
+.icon-select-arrow:before {
   content: "\e914";
 }
-._icon-send-request:before {
+.icon-send-request:before {
   content: "\e915";
 }
-._icon-size:before {
+.icon-size:before {
   content: "\e916";
 }
-._icon-twiter:before {
+.icon-twiter:before {
   content: "\e917";
 }

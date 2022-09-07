@@ -41,6 +41,8 @@
 
   &__burger {
     display: none;
+    span {
+    }
   }
 
   &__body {
@@ -74,5 +76,86 @@
   //Винести в окремий модуль  &__button
   &__button {
     @include button;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --pdng-conteiner: 55px;
+  }
+  .menu {
+    &__burger {
+      width: 87px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__burger-icon {
+      width: 28px;
+      display: block;
+      position: relative;
+      height: 14px;
+      z-index: 4;
+
+      &:before,
+      &:after {
+        content: "";
+        background-color: #ffffff;
+        position: absolute;
+        width: 100%;
+        height: 2.5px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+      &._active:before {
+        transform: rotate(45deg);
+        top: 9px;
+      }
+      &._active::after {
+        transform: rotate(-45deg);
+        bottom: 8px;
+      }
+    }
+    &__body {
+      display: none;
+    }
+  }
+}
+@media (max-width: 764px) {
+  :root {
+    --pdng-conteiner: 48px;
+  }
+  .menu {
+    &__burger {
+      width: 84px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --pdng-conteiner: 24px;
+  }
+  .menu {
+    width: 99px;
+    flex: 0 0 auto;
+    &__burger {
+      order: 2;
+      width: 28px;
+    }
+    &__heading {
+      display: none;
+    }
+    &__last-block {
+      order: 1;
+    }
+    &__button {
+      display: none;
+    }
   }
 }

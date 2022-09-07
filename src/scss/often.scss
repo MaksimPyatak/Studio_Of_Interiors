@@ -1,6 +1,6 @@
 @mixin container {
   max-width: 1314px;
-  padding: 0 5%; // ????????
+  padding: 0 var(--pdng-conteiner); // ????????
   margin: 0 auto;
   box-sizing: content-box;
 }
@@ -69,11 +69,9 @@
     }
   }
 }
-@mixin box-language(
-  $color: inherit,
-) {
-   width: 78px;
-   display: flex;
-   justify-content: space-between;
-   color: $color;
+@mixin box-language($color: inherit) {
+  width: 78px;
+  display: flex;
+  justify-content: space-between;
+  color: $color;
 }

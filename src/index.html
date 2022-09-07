@@ -45,13 +45,14 @@
             </div>
             <!-- If we need pagination -->
             <!-- <div class="swiper-pagination"></div> -->
+            <div class="scrollbar-navigation">
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+              <div class="swiper-button-next"></div>
+            </div>
             <h1 class="first-section__slogan">Thoughtful making of space</h1>
             @@include('html/elements/discover-more.html',{"class":
             "first-section__discover-more", "text": "Discover more"})
@@ -77,16 +78,18 @@
                   <a
                     class="first-section__email-link"
                     href="mailto:info@gmail.com"
-                    >E: info@gmail.com</a
+                    >info@gmail.com</a
                   >
                 </div>
               </div>
             </div>
-            <div class="first-section__next">
-              <a class="first-section__next-link" href="#">Next Project</a>
-            </div>
-            <div class="first-section__vertical-slogan">
-              Perfect proportions
+            <div class="first-section__column">
+              <div class="first-section__next">
+                <a class="first-section__next-link" href="#">Next Project</a>
+              </div>
+              <div class="first-section__vertical-slogan">
+                Perfect proportions
+              </div>
             </div>
           </div>
         </div>

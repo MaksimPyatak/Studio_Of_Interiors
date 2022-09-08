@@ -73,3 +73,7 @@ swiper.on('slideChange', function () {
       nextNomberSlide.textContent = next;
    }
 });
+
+
+//Підключення файлу з бургер-меню
+import "./Files/burger-menu.js";

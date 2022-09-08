@@ -1,5 +1,6 @@
 @mixin container {
   max-width: 1314px;
+  height: 100%;
   padding: 0 var(--pdng-conteiner); // ????????
   margin: 0 auto;
   box-sizing: content-box;
@@ -26,16 +27,15 @@
 @mixin discover-more(
   $color: inherit,
   $background: rgba(255, 255, 255, 0.4),
-  $position: absolute,
-  $top: 453px,
-  $left: 263px
+  //  $position: absolute,
+  //  $top: 453px,
+  //  $left: 263px
 ) {
-  z-index: 11;
-  position: $position;
+  //  position: $position;
   //width: 187px;
   height: 13px;
-  top: $top;
-  left: $left;
+  //  top: $top;
+  //  left: $left;
 
   .discover-more__link {
     font-size: 10px;

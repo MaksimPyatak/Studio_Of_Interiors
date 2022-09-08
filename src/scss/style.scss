@@ -12,6 +12,9 @@
 // Variable
 @import "variable";
 
+// Загальні стилі
+@import "global";
+
 @import "../../node_modules/swiper/swiper.scss";
 @import "../../node_modules/swiper/modules/navigation/navigation.scss";
 @import "../../node_modules/swiper/modules/pagination/pagination.scss";
@@ -53,6 +56,9 @@ main {
     width: 100%;
     height: 100%;
     position: absolute;
+    &._active {
+      width: 100vw;
+    }
   }
 
   &__swiper-wrapper {
@@ -147,13 +153,14 @@ main {
     height: 122px;
     left: 18.26%;
     top: 279px;
-    z-index: 11;
+    z-index: 1;
     font-size: 56px;
     line-height: 121.43%;
   }
 
   &__discover-more {
     @include discover-more;
+    z-index: 1;
 
     position: absolute;
     top: 453px;
@@ -237,7 +244,7 @@ main {
   }
 
   &__column {
-    z-index: 11;
+    z-index: 1;
     position: absolute;
     right: 3.96%;
     bottom: 6%;
@@ -274,5 +281,109 @@ main {
     &__location {
       margin-left: 79px;
     }
+  }
+}
+.second-section {
+  width: 100%;
+  height: 94.31vw;
+  padding-top: 9.73%;
+  padding-bottom: 9.73%;
+
+  color: #080808;
+  position: relative;
+
+  &__conteiner {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__vertical-box {
+    height: 100%;
+    flex: 1 1 10.06%;
+  }
+
+  &__main-box {
+    height: 100%;
+    flex: 1 1 89.93%;
+    display: flex;
+    justify-content: space-between;
+    gap: 11.28%;
+  }
+
+  &__first-column {
+    flex: 1 1 43.07%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__content {
+    width: 515px;
+    margin-top: 11.6%;
+    p {
+      margin-top: 24px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 4px;
+  }
+
+  &__paragraph1 {
+  }
+
+  &__discover-more {
+    @include discover-more;
+    margin-top: 64px;
+  }
+
+  &__img-box1 {
+    height: 48.07%;
+    position: relative;
+  }
+  &__top-img {
+    width: 54.17%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+  &__last-img {
+    width: 61.36%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__second-column {
+    flex: 1 1 44.63%;
+  }
+
+  .second-section__img-none {
+    width: 35.625vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: calc(var(--pdng-conteiner) * (-1));
+  }
+
+  &__quote-box {
+    width: 29.86%;
+    position: absolute;
+    right: 15%;
+    bottom: 17.75%;
+    display: flex;
+    gap: 7.44%;
+  }
+
+  &__quotes {
+  }
+
+  &__pharaph3 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 170.66%;
+    opacity: 0.7;
   }
 }

@@ -8,7 +8,6 @@
       <main>
         <div class="first-section">
           <div class="first-section__swiper swiper">
-            <div class="header__zero"></div>
             <div class="first-section__swiper-wrapper swiper-wrapper">
               <!-- Slides -->
               <div class="first-section__swiper-slide swiper-slide">
@@ -56,34 +55,9 @@
             </div>
             <h1 class="first-section__slogan">Thoughtful making of space</h1>
             @@include('html/elements/discover-more.html',{"class":
-            "first-section__discover-more", "text": "Discover more"})
-            <div class="first-section__data-box">
-              @@include('html/elements/box-language.html',{"class":
-              "first-section__language-box"})
-              <div class="first-section__location">
-                <div class="first-section__flag icon-geotag"></div>
-                <select class="first-section__city-list">
-                  <option class="first-section__city-name">Berlin</option>
-                  <option class="first-section__city-name">London</option>
-                  <option class="first-section__city-name">Paris</option>
-                  <option class="first-section__city-name">Brussels</option>
-                </select>
-              </div>
-              <div class="first-section__contacts">
-                <div class="first-section__phone">
-                  <a class="first-section__phone-link" href="tel:+380983527547"
-                    >+380983527547</a
-                  >
-                </div>
-                <div class="first-section__email">
-                  <a
-                    class="first-section__email-link"
-                    href="mailto:info@gmail.com"
-                    >info@gmail.com</a
-                  >
-                </div>
-              </div>
-            </div>
+            "first-section__discover-more", "text": "Discover more", "href":
+            "#"}) @@include('html/elements/data-box.html',{"class":
+            "first-section__data-box"})
             <div class="first-section__column">
               <div class="first-section__next">
                 <a class="first-section__next-link" href="#">Next Project</a>
@@ -95,57 +69,60 @@
           </div>
         </div>
         <div class="second-section">
-          <div class="second-section__conteiner">
-            <div class="second-section__vertical-box"></div>
-            <div class="second-section__main-box">
-              <div class="second-section__first-column">
-                <div class="second-section__content">
-                  <h2 class="second-section__heading">Company Philosophy</h2>
-                  <p class="second-section__paragraph1 p1">
-                    The basic philosophy of our studio is to create individual,
-                    aesthetically stunning solutions for our customers by
-                    lightning-fast development of projects employing unique
-                    styles and architecture. Even if you don't have a ready
-                    sketch of what you want - we will help you get the result.
-                  </p>
-                  <p class="second-section__paragraph2 p1">
-                    We can also help you create harmony out of seemingly
-                    completely incompatible elements in the interior or the
-                    exterior design. Do you want to combine classics and
-                    abstract art? Modern and retro? Love everything associated
-                    with the 1940's? No problem!
-                  </p>
-                  @@include('html/elements/discover-more.html',{"class":
-                  "second-section__discover-more", "text": "Discover more"})
-                </div>
-                <div class="second-section__img-box1">
-                  <img
-                    class="second-section__top-img"
-                    src="@img/second-section/top-img.png"
-                    alt=""
-                  />
-                  <img
-                    class="second-section__last-img"
-                    src="@img/second-section/last-img.png"
-                    alt=""
-                  />
+          <div class="second-section__vertical-heading">
+            <div class="second-section__vertical-heading-box">About</div>
+          </div>
+          <div class="second-section__content">
+            <h2 class="second-section__heading">Company Philosophy</h2>
+            <p class="second-section__paragraph1 p1">
+              The basic philosophy of our studio is to create individual,
+              aesthetically stunning solutions for our customers by
+              lightning-fast development of projects employing unique styles and
+              architecture. Even if you don't have a ready sketch of what you
+              want - we will help you get the result.
+            </p>
+            <p class="second-section__paragraph2 p1">
+              We can also help you create harmony out of seemingly completely
+              incompatible elements in the interior or the exterior design. Do
+              you want to combine classics and abstract art? Modern and retro?
+              Love everything associated with the 1940's? No problem!
+            </p>
+            @@include('html/elements/discover-more.html',{"class":
+            "second-section__discover-more", "text": "Discover more", "href":
+            "#"})
+          </div>
+          <div class="second-section__img-box1">
+            <img
+              class="second-section__img-none"
+              src="@img/second-section/img-none.png"
+              alt=""
+            />
+          </div>
+          <div class="second-section__img-box2">
+            <img
+              class="second-section__top-img"
+              src="@img/second-section/top-img.png"
+              alt=""
+            />
+            <img
+              class="second-section__last-img"
+              src="@img/second-section/last-img.png"
+              alt=""
+            />
+          </div>
+          <div class="second-section__quote-box">
+            <div class="second-section__general-quote-box">
+              <div class="second-section__quote-box-conteiner">
+                <h2 class="second-section__quotes">“</h2>
+                <div class="second-section__pharaph3">
+                  We can also help you create harmony out of seemingly
+                  completely incompatible elements in the interior or the
+                  exterior design.
                 </div>
               </div>
-              <div class="second-section__second-column">
-                <div class="second-section__img-box1">
-                  <img
-                    class="second-section__img-none"
-                    src="@img/second-section/img-none.png"
-                    alt=""
-                  />
-                </div>
-                <div class="second-section__quote-box">
-                  <h2 class="second-section__quotes">“</h2>
-                  <div class="second-section__pharaph3">
-                    We can also help you create harmony out of seemingly
-                    completely incompatible elements in the interior or the
-                    exterior design.
-                  </div>
+              <div class="second-section__quote-signature">
+                <div class="second-section__quote-signature-box">
+                  Ceo company
                 </div>
               </div>
             </div>

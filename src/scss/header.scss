@@ -6,9 +6,11 @@
   left: 0;
   right: 0;
   z-index: 50;
+  background: rgba(8, 8, 8, 0.2);
 
   &__container {
     @include container;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,13 +18,22 @@
 
   &__zero {
     position: absolute;
-    top: -100vw;
+    top: -100vh;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     left: 0;
     transition: all 0.9s ease 0s;
-    z-index: 6;
+    // z-index: 0;
   }
+
+  .header__data-box {
+    position: absolute;
+    z-index: 11;
+    left: var(--pdng-conteiner, 63px);
+    bottom: 40px;
+  }
+
+  @include data-box;
 
   &__logo {
     flex: 1 1 15.3%;
@@ -79,9 +90,10 @@
     align-items: center;
   }
 
-  //  &__language {
-  //  }
-  //Винести в окремий модуль  &__button
+  &__language {
+    z-index: 2;
+  }
+
   &__button {
     @include button;
     z-index: 2;
@@ -155,11 +167,11 @@
     opacity: 0.98;
     transition: all 0.9s ease 0s;
   }
-  .first-section {
-    &__data-box {
-      z-index: 111;
-    }
-  }
+  //  .first-section {
+  //    &__data-box {
+  //      z-index: 111;
+  //    }
+  //  }
 }
 @media (max-width: 764px) {
   :root {

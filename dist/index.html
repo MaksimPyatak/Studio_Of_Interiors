@@ -12,7 +12,41 @@
     <div class="wrapper">
       <header class="header">
   <div class="header__container">
-    <!--<div class="header__zero"></div>-->
+    <div class="header__zero">
+      <div class="header__data-box data-box">
+  <ul class="data-box__language-box language-box">
+    <li class="language-box__item">
+        <a class="language-box__link" href="#">Fb</a>
+    </li>
+    <li class="language-box__item">
+        <a class="language-box__link" href="#">In</a>
+    </li>
+    <li class="language-box__item">
+        <a class="language-box__link" href="#">Be</a>
+    </li>
+</ul>
+  <div class="data-box__location">
+    <div class="data-box__flag icon-geotag"></div>
+    <select class="data-box__city-list">
+      <option class="data-box__city-name">Berlin</option>
+      <option class="data-box__city-name">London</option>
+      <option class="data-box__city-name">Paris</option>
+      <option class="data-box__city-name">Brussels</option>
+    </select>
+  </div>
+  <div class="data-box__contacts">
+    <div class="data-box__phone">
+      <a class="data-box__phone-link" href="tel:+380983527547">+380983527547</a>
+    </div>
+    <div class="data-box__email">
+      <a class="data-box__email-link" href="mailto:info@gmail.com">
+        info@gmail.com
+      </a>
+    </div>
+  </div>
+</div>
+
+    </div>
     <div class="header__logo"><a href="#"> Logo</a></div>
     <div class="header__menu menu">
       <nav class="menu__body">
@@ -50,7 +84,6 @@
       <main>
         <div class="first-section">
           <div class="first-section__swiper swiper">
-            <div class="header__zero"></div>
             <div class="first-section__swiper-wrapper swiper-wrapper">
               <!-- Slides -->
               <div class="first-section__swiper-slide swiper-slide">
@@ -100,9 +133,8 @@
             <div class="first-section__discover-more discover-more">
   <a class="discover-more__link" href="#"> Discover more </a>
 </div>
-
-            <div class="first-section__data-box">
-              <ul class="first-section__language-box language-box">
+ <div class="first-section__data-box data-box">
+  <ul class="data-box__language-box language-box">
     <li class="language-box__item">
         <a class="language-box__link" href="#">Fb</a>
     </li>
@@ -113,30 +145,27 @@
         <a class="language-box__link" href="#">Be</a>
     </li>
 </ul>
-              <div class="first-section__location">
-                <div class="first-section__flag icon-geotag"></div>
-                <select class="first-section__city-list">
-                  <option class="first-section__city-name">Berlin</option>
-                  <option class="first-section__city-name">London</option>
-                  <option class="first-section__city-name">Paris</option>
-                  <option class="first-section__city-name">Brussels</option>
-                </select>
-              </div>
-              <div class="first-section__contacts">
-                <div class="first-section__phone">
-                  <a class="first-section__phone-link" href="tel:+380983527547"
-                    >+380983527547</a
-                  >
-                </div>
-                <div class="first-section__email">
-                  <a
-                    class="first-section__email-link"
-                    href="mailto:info@gmail.com"
-                    >info@gmail.com</a
-                  >
-                </div>
-              </div>
-            </div>
+  <div class="data-box__location">
+    <div class="data-box__flag icon-geotag"></div>
+    <select class="data-box__city-list">
+      <option class="data-box__city-name">Berlin</option>
+      <option class="data-box__city-name">London</option>
+      <option class="data-box__city-name">Paris</option>
+      <option class="data-box__city-name">Brussels</option>
+    </select>
+  </div>
+  <div class="data-box__contacts">
+    <div class="data-box__phone">
+      <a class="data-box__phone-link" href="tel:+380983527547">+380983527547</a>
+    </div>
+    <div class="data-box__email">
+      <a class="data-box__email-link" href="mailto:info@gmail.com">
+        info@gmail.com
+      </a>
+    </div>
+  </div>
+</div>
+
             <div class="first-section__column">
               <div class="first-section__next">
                 <a class="first-section__next-link" href="#">Next Project</a>
@@ -148,59 +177,61 @@
           </div>
         </div>
         <div class="second-section">
-          <div class="second-section__conteiner">
-            <div class="second-section__vertical-box"></div>
-            <div class="second-section__main-box">
-              <div class="second-section__first-column">
-                <div class="second-section__content">
-                  <h2 class="second-section__heading">Company Philosophy</h2>
-                  <p class="second-section__paragraph1 p1">
-                    The basic philosophy of our studio is to create individual,
-                    aesthetically stunning solutions for our customers by
-                    lightning-fast development of projects employing unique
-                    styles and architecture. Even if you don't have a ready
-                    sketch of what you want - we will help you get the result.
-                  </p>
-                  <p class="second-section__paragraph2 p1">
-                    We can also help you create harmony out of seemingly
-                    completely incompatible elements in the interior or the
-                    exterior design. Do you want to combine classics and
-                    abstract art? Modern and retro? Love everything associated
-                    with the 1940's? No problem!
-                  </p>
-                  <div class="second-section__discover-more discover-more">
+          <div class="second-section__vertical-heading">
+            <div class="second-section__vertical-heading-box">About</div>
+          </div>
+          <div class="second-section__content">
+            <h2 class="second-section__heading">Company Philosophy</h2>
+            <p class="second-section__paragraph1 p1">
+              The basic philosophy of our studio is to create individual,
+              aesthetically stunning solutions for our customers by
+              lightning-fast development of projects employing unique styles and
+              architecture. Even if you don't have a ready sketch of what you
+              want - we will help you get the result.
+            </p>
+            <p class="second-section__paragraph2 p1">
+              We can also help you create harmony out of seemingly completely
+              incompatible elements in the interior or the exterior design. Do
+              you want to combine classics and abstract art? Modern and retro?
+              Love everything associated with the 1940's? No problem!
+            </p>
+            <div class="second-section__discover-more discover-more">
   <a class="discover-more__link" href="#"> Discover more </a>
 </div>
 
-                </div>
-                <div class="second-section__img-box1">
-                  <img
-                    class="second-section__top-img"
-                    src="img/second-section/top-img.png"
-                    alt=""
-                  />
-                  <img
-                    class="second-section__last-img"
-                    src="img/second-section/last-img.png"
-                    alt=""
-                  />
+          </div>
+          <div class="second-section__img-box1">
+            <img
+              class="second-section__img-none"
+              src="img/second-section/img-none.png"
+              alt=""
+            />
+          </div>
+          <div class="second-section__img-box2">
+            <img
+              class="second-section__top-img"
+              src="img/second-section/top-img.png"
+              alt=""
+            />
+            <img
+              class="second-section__last-img"
+              src="img/second-section/last-img.png"
+              alt=""
+            />
+          </div>
+          <div class="second-section__quote-box">
+            <div class="second-section__general-quote-box">
+              <div class="second-section__quote-box-conteiner">
+                <h2 class="second-section__quotes">“</h2>
+                <div class="second-section__pharaph3">
+                  We can also help you create harmony out of seemingly
+                  completely incompatible elements in the interior or the
+                  exterior design.
                 </div>
               </div>
-              <div class="second-section__second-column">
-                <div class="second-section__img-box1">
-                  <img
-                    class="second-section__img-none"
-                    src="img/second-section/img-none.png"
-                    alt=""
-                  />
-                </div>
-                <div class="second-section__quote-box">
-                  <h2 class="second-section__quotes">“</h2>
-                  <div class="second-section__pharaph3">
-                    We can also help you create harmony out of seemingly
-                    completely incompatible elements in the interior or the
-                    exterior design.
-                  </div>
+              <div class="second-section__quote-signature">
+                <div class="second-section__quote-signature-box">
+                  Ceo company
                 </div>
               </div>
             </div>

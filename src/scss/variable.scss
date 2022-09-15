@@ -1,3 +1,13 @@
 :root {
   --pdng-conteiner: 63px;
+  @media screen and (max-width: 1024px) {
+    --pdng-conteiner: 56px;
+  }
+  @media screen and (max-width: 768px) {
+    --pdng-conteiner: 48px;
+  }
+  //  @media screen and (max-width: 768px) {
+  //   --pdng-conteiner: 48px;
+  // }
+  --pdng-text-conteiner: 120px;
 }

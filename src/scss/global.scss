@@ -2,6 +2,13 @@ h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 122%;
+  @media (max-width: 1024px) {
+    font-size: 32px;
+    line-height: 121.875%;
+  }
+  @media (max-width: 375px) {
+    font-size: 26px;
+  }
 }
 .p1 {
   font-weight: 300;

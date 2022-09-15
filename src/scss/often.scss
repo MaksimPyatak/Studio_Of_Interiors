@@ -1,7 +1,14 @@
 @mixin container {
   max-width: 1314px;
   height: 100%;
-  padding: 0 var(--pdng-conteiner); // ????????
+  padding: 0 var(--pdng-conteiner);
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+@mixin text-container {
+  max-width: 768px;
+  height: 100%;
+  padding: 0 16.15%; //var(--pdng-text-conteiner)
   margin: 0 auto;
   box-sizing: content-box;
 }
@@ -32,12 +39,13 @@
   //  $left: 263px
 ) {
   //  position: $position;
-  //width: 187px;
+  width: fit-content;
   height: 13px;
   //  top: $top;
   //  left: $left;
 
   .discover-more__link {
+    position: relative;
     font-size: 10px;
     line-height: 120%;
     letter-spacing: 0.12em;
@@ -51,18 +59,14 @@
       position: absolute;
       top: 35%;
       display: block;
-      width: 8px;
-      height: 1px;
       background: $background;
     }
     &::before {
-      position: absolute;
-      left: 0%;
+      left: 0;
       width: 8px;
       height: 1px;
     }
     &::after {
-      position: absolute;
       right: 0;
       width: 56px;
       height: 1px;
@@ -73,5 +77,115 @@
   width: 78px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: $color;
+}
+
+@mixin data-box() {
+  .data-box {
+    width: 100%; //634px
+    display: flex;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 118.18%;
+    letter-spacing: 0.06em;
+
+    .language-box {
+      @include box-language;
+    }
+
+    &__location {
+      margin-left: 8.4%; //19.09%
+      width: 117px;
+      height: 24px;
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 0px 1.15336px 1.22544px rgba(0, 0, 0, 0.2),
+        inset 0px -0.288339px 0.0720847px rgba(255, 255, 255, 0.23);
+      backdrop-filter: blur(2px);
+      border-radius: 8.70783px;
+      display: flex;
+      align-items: center;
+      @media (max-width: 1024px) {
+        margin-left: 7.71%;
+      }
+      @media (max-width: 768px) {
+        margin-left: 8.33%;
+      }
+    }
+
+    &__flag {
+      margin-left: 12px;
+      font-size: 10px;
+    }
+
+    &__city-list {
+      width: 77px;
+      margin-left: 6px;
+      background: none;
+      border: none;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 11.18%;
+      letter-spacing: 0.06em;
+      color: inherit;
+    }
+
+    &__city-name {
+      color: black;
+    }
+
+    &__contacts {
+      width: 346px;
+      margin-left: 5%;
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: space-between;
+      align-items: center;
+    }
+
+    &__phone {
+    }
+
+    &__phone-link {
+    }
+
+    &__email {
+      margin-left: 40px;
+    }
+
+    &__email-link {
+    }
+  }
+}
+
+@mixin vertical-h5(
+  $color: rgba(255, 255, 255, 0.13),
+  $background: rgba(255, 255, 255, 0.04),
+  $w,
+  $h: 11px
+) {
+  width: $w;
+  height: $h;
+  position: relative;
+  font-size: 8px;
+  line-height: 175%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $color;
+  display: flex;
+  padding: 0 0 0 70px;
+  //  transform: rotate(-90deg) translate(($h-$w) / 2, ($h-$w) / 2);
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 35%;
+    display: block;
+    background: $background;
+    left: 0;
+    width: 57px;
+    height: 1px;
+  }
 }

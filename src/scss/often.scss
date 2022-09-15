@@ -92,6 +92,9 @@
 
     .language-box {
       @include box-language;
+      @media (max-width: 500px) {
+        display: none;
+      }
     }
 
     &__location {
@@ -137,22 +140,26 @@
     }
 
     &__contacts {
-      width: 346px;
-      margin-left: 5%;
+      width: auto;
+      margin: 0 0 0 5%;
       display: flex;
       flex-wrap: wrap;
-      // justify-content: space-between;
       align-items: center;
+      @media (max-width: 672px) {
+        flex-direction: column;
+        // justify-content: space-between;
+        align-items: flex-start;
+      }
     }
 
     &__phone {
+      margin-right: 40px;
     }
 
     &__phone-link {
     }
 
     &__email {
-      margin-left: 40px;
     }
 
     &__email-link {

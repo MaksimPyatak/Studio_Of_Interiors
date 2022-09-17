@@ -42,6 +42,21 @@ body {
 
 @import "header";
 
+// Додаємо в бургер-меню поточну сторінку
+.menu__list {
+  & li:nth-child(1) {
+    display: none;
+  }
+  @media (max-width: 1024px) {
+    & li:nth-child(1) {
+      display: block;
+      opacity: 1;
+    }
+  }
+}
+
+//@include menu-list(1);
+
 main {
   flex: 1 1 auto;
 }
@@ -56,6 +71,9 @@ main {
   }
   @media (max-width: 768px) {
     height: 959px;
+  }
+  @media (max-width: 500px) {
+    height: 542px;
   }
   &__swiper {
     width: 100%;
@@ -90,7 +108,7 @@ main {
   justify-content: space-between;
   position: absolute;
   z-index: 5;
-  top: 61.83%;
+  top: 62.3%;
   right: 171px;
   font-weight: 300;
   font-size: 11px;
@@ -98,9 +116,22 @@ main {
   letter-spacing: 0.06em;
   color: #ffffff;
   @media (max-width: 1024px) {
+    width: 236px;
     right: 162px;
   }
   @media (max-width: 768px) {
+    right: 145px;
+  }
+  @media (max-width: 730px) {
+    width: 177px;
+  }
+  @media (max-width: 650px) {
+    left: 16.14%;
+    top: 25.83%;
+    transform: translate(13px);
+  }
+  @media (max-width: 500px) {
+    left: var(--pdng-conteiner);
   }
 }
 .scrollbar-navigation .swiper-button-prev {
@@ -133,23 +164,19 @@ main {
     font-size: 9px;
   }
 }
-//.swiper-scrollbar {
-//  position: absolute;
 
-//  width: 186px;
-//  height: 1px;
-//  top: 61.83%;
-//  left: 72%;
-//}
 .swiper-horizontal > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: static;
   //  z-index: 5;
   //  top: 61.83%;
   //  left: 72%;
-  width: 186px;
+  width: 148px;
   height: 1px;
   background: rgba(255, 255, 255, 0.32);
+  @media screen and (max-width: 730px) {
+    width: 88px;
+  }
 }
 .swiper-scrollbar-drag {
   //  z-index: 5;
@@ -159,13 +186,29 @@ main {
 .first-section {
   &__slogan {
     position: absolute;
-    width: 569px;
+    width: 551px;
     height: 122px;
     left: 18.26%;
-    top: 279px;
+    top: 37.5%;
     z-index: 1;
     font-size: 56px;
     line-height: 121.43%;
+    @media (max-width: 1024px) {
+      width: 440px;
+      font-size: 48px;
+      left: 15.52%;
+    }
+    @media (max-width: 768px) {
+      width: 380px;
+      font-size: 44px;
+      left: 16.14%;
+    }
+    @media (max-width: 500px) {
+      font-size: 40px;
+      line-height: 97.5%;
+      left: var(--pdng-conteiner);
+      width: 76.8%;
+    }
   }
 
   &__discover-more {
@@ -173,8 +216,21 @@ main {
     z-index: 1;
 
     position: absolute;
-    top: 453px;
+    top: 61.83%;
     left: 18.26%;
+    @media (max-width: 1024px) {
+      left: 15.52%;
+    }
+    @media (max-width: 768px) {
+      left: 16.14%;
+    }
+    @media (max-width: 500px) {
+      left: var(--pdng-conteiner);
+      top: 68.82%;
+    }
+    @media (max-width: 425px) {
+      left: var(--pdng-conteiner);
+    }
   }
 
   &__data-box {
@@ -182,6 +238,12 @@ main {
     z-index: 11;
     left: var(--pdng-conteiner, 63px);
     bottom: 40px;
+    @media (max-width: 1024px) {
+      bottom: 32px;
+    }
+    @media (max-width: 425px) {
+      bottom: 24px;
+    }
   }
 
   @include data-box;
@@ -195,10 +257,16 @@ main {
     bottom: 6%;
     transform: rotate(-90deg) translate(102px, 102px);
     @media (max-width: 1024px) {
-      transform: rotate(-90deg) translate(121px, 102px);
+      transform: rotate(-90deg) translate(113px, 102px);
     }
     @media (max-width: 768px) {
-      transform: rotate(-90deg) translate(124px, 171px);
+      transform: rotate(-90deg) translate(135px, 148px);
+    }
+    @media (max-width: 500px) {
+      transform: rotate(-90deg) translate(169px, 160px);
+    }
+    @media (max-width: 500px) {
+      transform: rotate(-90deg) translate(164px, 160px);
     }
   }
 
@@ -208,6 +276,9 @@ main {
     font-size: 11px;
     line-height: 13px;
     letter-spacing: 0.06em;
+    @media (max-width: 500px) {
+      display: none;
+    }
   }
 
   &__next-link {
@@ -215,7 +286,7 @@ main {
 
   &__vertical-slogan {
     width: 318px;
-    height: 93px;
+    height: auto; //93px
     font-size: 3.33vw;
     line-height: 3.26vw;
     letter-spacing: 0.04em;
@@ -223,20 +294,15 @@ main {
     -webkit-text-stroke: 1px #fff;
     @media (max-width: 1024px) {
       font-size: 32px;
-      height: 62px;
-      @media (max-width: 768px) {
-        width: 354px;
-      }
+      height: auto; //62px
     }
-  }
-}
-@media (max-width: 1024px) {
-  .first-section {
-    &__slogan {
-      font-size: 48px;
+    @media (max-width: 768px) {
+      width: 354px;
     }
-    &__location {
-      margin-left: 79px;
+    @media (max-width: 425px) {
+      font-size: 18px;
+      -webkit-text-fill-color: unset;
+      -webkit-text-stroke: unset;
     }
   }
 }

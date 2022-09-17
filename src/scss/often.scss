@@ -18,16 +18,24 @@
   $border-color: rgba(253, 253, 253, 0.32),
   $color: inherit
 ) {
-  width: auto;
-  padding: 17px 48px;
+  width: 183px;
+  height: 48px;
+  //  padding: 17px 48px;
   border: $border-width solid $border-color;
   background: $background;
+  display: flex;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 11px;
   line-height: 13px;
   color: $color;
+  div {
+    margin: auto auto;
+  }
+  @media (max-width: 1024px) {
+    height: 42px;
+  }
 }
 // Текст з двома лініями з двох боків -ТЕКСТ----
 //Додаємо в основний блок
@@ -114,6 +122,9 @@
       @media (max-width: 768px) {
         margin-left: 8.33%;
       }
+      @media (max-width: 500px) {
+        margin-left: 0;
+      }
     }
 
     &__flag {
@@ -196,3 +207,17 @@
     height: 1px;
   }
 }
+
+//@mixin menu-list($nomber-child: 1) {
+//  .menu__list {
+//    & li:nth-child($nomber-child) {
+//      display: none;
+//    }
+//    @media (max-width: 1024px) {
+//      & li:nth-child($nomber-child) {
+//        display: block;
+//        opacity: 0.5;
+//      }
+//    }
+//  }
+//}

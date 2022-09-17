@@ -25,7 +25,7 @@ export const swiper = new Swiper('.first-section__swiper', {
     // And if we need scrollbar
     scrollbar: {
         el: '.swiper-scrollbar',
-        dragSize: 89.91,
+        dragSize: 37.22,
     },
     slidesPerView: 'auto',
     spaceBetween: 0, 

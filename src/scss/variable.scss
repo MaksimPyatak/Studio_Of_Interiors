@@ -6,8 +6,8 @@
   @media screen and (max-width: 768px) {
     --pdng-conteiner: 48px;
   }
-  //  @media screen and (max-width: 768px) {
-  //   --pdng-conteiner: 48px;
-  // }
+  @media screen and (max-width: 375px) {
+    --pdng-conteiner: 24px;
+  }
   --pdng-text-conteiner: 120px;
 }

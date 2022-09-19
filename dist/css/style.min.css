@@ -762,6 +762,16 @@ body {
   z-index: 50;
   background: rgba(8, 8, 8, 0.2);
 }
+@media (max-width: 1024px) {
+  .header {
+    height: 106px;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    height: 60px;
+  }
+}
 .header__container {
   max-width: 1314px;
   height: 100%;
@@ -786,6 +796,16 @@ body {
   z-index: 11;
   left: var(--pdng-conteiner, 63px);
   bottom: 40px;
+}
+@media (max-width: 1024px) {
+  .header .header__data-box {
+    bottom: 32px;
+  }
+}
+@media (max-width: 425px) {
+  .header .header__data-box {
+    bottom: 24px;
+  }
 }
 .header .data-box {
   width: 100%;
@@ -930,6 +950,38 @@ body {
     order: 2;
   }
 }
+.menu__box-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.menu__box-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+@media (max-width: 1024px) {
+  .menu__box-list {
+    position: absolute;
+    height: calc(100vh - 200px);
+    top: 106px;
+  }
+}
+@media (max-width: 768px) {
+  .menu__box-list {
+    height: calc(100vh - 178px);
+    top: 90px;
+  }
+}
+@media (max-width: 600px) {
+  .menu__box-list {
+    height: calc(100vh - 132px);
+    top: 60px;
+  }
+}
 .menu__list {
   height: 100%;
   display: flex;
@@ -938,6 +990,9 @@ body {
 }
 .menu__item {
   margin-right: 48px;
+}
+.menu__item_button {
+  display: none;
 }
 .menu__last-block {
   width: 283px;
@@ -987,9 +1042,6 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .menu {
-    position: relative;
-  }
   .menu__burger {
     width: 87px;
     height: 100%;
@@ -1027,20 +1079,23 @@ body {
   }
   .menu__burger-icon._active:before {
     transform: rotate(45deg);
-    top: 4px;
+    top: 5px;
   }
   .menu__burger-icon._active::after {
     transform: rotate(-45deg);
     bottom: 8px;
   }
-  .menu__list {
+  .menu__box-list {
     display: none;
+  }
+  .menu__box-list._active {
+    display: block;
+  }
+  .menu__list {
     width: 233px;
-    height: 322px;
-    position: absolute;
-    top: 28vh;
-    left: 10px;
-    margin-bottom: 96px;
+    height: min-content;
+    margin-top: 12vh;
+    overflow-y: auto;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
@@ -1049,10 +1104,11 @@ body {
     color: #ffffff;
   }
   .menu__list li {
+    margin-bottom: 41px;
     opacity: 0.5;
   }
-  .menu__list._active {
-    display: flex;
+  .menu__list li:last-child {
+    margin-bottom: 45px;
   }
   .header__zero._active {
     top: 0;
@@ -1061,7 +1117,7 @@ body {
     transition: all 0.9s ease 0s;
   }
 }
-@media (max-width: 764px) {
+@media (max-width: 768px) {
   .menu__burger {
     width: 84px;
   }
@@ -1073,16 +1129,64 @@ body {
   }
   .menu__burger {
     order: 2;
-    width: 28px;
+    width: auto;
   }
   .menu__heading {
     display: none;
   }
+  .menu__item_button {
+    display: none;
+    width: 183px;
+    height: 48px;
+    border: 1px solid rgba(253, 253, 253, 0.32);
+    background: none;
+    display: flex;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    color: inherit;
+    z-index: 2;
+    width: 158px;
+  }
+  .menu__item_button div {
+    margin: auto auto;
+  }
+}
+@media (max-width: 600px) and (max-width: 1024px) {
+  .menu__item_button {
+    height: 42px;
+  }
+}
+@media (max-width: 600px) {
   .menu__last-block {
     order: 1;
   }
+}
+@media (max-width: 600px) {
   .menu__button {
     display: none;
+  }
+}
+@media (max-width: 600px) {
+  .menu__box-list {
+    right: 0;
+    width: 100vw;
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .menu__list {
+    font-size: 26px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 600px) {
+  .menu__item {
+    margin-right: 0;
   }
 }
 .menu__list li:nth-child(1) {
@@ -1483,6 +1587,39 @@ main {
     -webkit-text-fill-color: unset;
     -webkit-text-stroke: unset;
   }
+}
+
+.toolbar {
+  display: none;
+}
+@media (max-width: 600px) {
+  .toolbar {
+    display: block;
+    width: 100%;
+    height: 55px;
+  }
+}
+.toolbar__conteiner {
+  width: 100%;
+  height: 100%;
+  padding: 0 8px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.toolbar__icon-box {
+  width: 44px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toolbar__icon {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 105%;
+  color: #2e7cf6;
 }
 
 .second-section {

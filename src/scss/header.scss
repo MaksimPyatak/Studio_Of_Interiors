@@ -7,6 +7,14 @@
   right: 0;
   z-index: 50;
   background: rgba(8, 8, 8, 0.2);
+  @media (max-width: 1024px) {
+    height: 106px;
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 600px) {
+    height: 60px;
+  }
 
   &__container {
     @include container;
@@ -31,6 +39,13 @@
     z-index: 11;
     left: var(--pdng-conteiner, 63px);
     bottom: 40px;
+
+    @media (max-width: 1024px) {
+      bottom: 32px;
+    }
+    @media (max-width: 425px) {
+      bottom: 24px;
+    }
   }
 
   @include data-box;
@@ -92,7 +107,33 @@
       order: 2;
     }
   }
+  &__box-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    @media (max-width: 1024px) {
+      position: absolute;
+      height: calc(100vh - 200px);
+      top: 106px;
+    }
+    @media (max-width: 768px) {
+      height: calc(100vh - 178px);
+      top: 90px;
+    }
+    @media (max-width: 600px) {
+      height: calc(100vh - 132px);
+      top: 60px;
+    }
+  }
   &__list {
     height: 100%;
     display: flex;
@@ -103,6 +144,9 @@
 
   &__item {
     margin-right: 48px;
+  }
+  &__item_button {
+    display: none;
   }
 
   //  &__link {
@@ -135,11 +179,9 @@
 }
 
 @media (max-width: 1024px) {
-  :root {
-    // --pdng-conteiner: 55px;
-  }
   .menu {
-    position: relative;
+    // position: relative;
+    // height: calc(100vh - 40px); //!!!!!!!!!!!!
     &__burger {
       width: 87px;
       height: 100%;
@@ -150,6 +192,7 @@
     &__heading._active {
       display: none;
     }
+
     &__burger-icon {
       width: 28px;
       display: block;
@@ -177,33 +220,39 @@
       }
       &._active:before {
         transform: rotate(45deg);
-        top: 4px;
+        top: 5px;
       }
       &._active::after {
         transform: rotate(-45deg);
         bottom: 8px;
       }
     }
-    &__list {
+    // .header__menu ._active {
+    // }
+    &__box-list {
       display: none;
+      &._active {
+        display: block;
+      }
+    }
+    &__list {
       width: 233px;
-      height: 322px;
-      position: absolute;
-      top: 28vh;
-      left: 10px;
-      margin-bottom: 96px;
+      height: min-content;
+      margin-top: 12vh;
+      overflow-y: auto;
       flex-direction: column;
       justify-content: space-between;
       align-items: start;
       font-size: 32px;
       line-height: 121.875%;
       color: #ffffff;
-      //transform: translateY(-50%);
+
       & li {
+        margin-bottom: 41px;
         opacity: 0.5;
-      }
-      &._active {
-        display: flex;
+        &:last-child {
+          margin-bottom: 45px;
+        }
       }
     }
   }
@@ -213,16 +262,8 @@
     opacity: 0.98;
     transition: all 0.9s ease 0s;
   }
-  //  .first-section {
-  //    &__data-box {
-  //      z-index: 111;
-  //    }
-  //  }
 }
-@media (max-width: 764px) {
-  :root {
-    // --pdng-conteiner: 48px;
-  }
+@media (max-width: 768px) {
   .menu {
     &__burger {
       width: 84px;
@@ -230,25 +271,42 @@
   }
 }
 @media (max-width: 600px) {
-  //????
-  :root {
-    // --pdng-conteiner: 24px;//??????
-  }
   .menu {
     width: 99px;
     flex: 0 0 auto;
     &__burger {
       order: 2;
-      width: 28px;
+      width: auto;
     }
     &__heading {
       display: none;
+    }
+    &__item_button {
+      display: none;
+      @include button;
+      z-index: 2;
+      width: 158px;
     }
     &__last-block {
       order: 1;
     }
     &__button {
       display: none;
+    }
+    &__box-list {
+      right: 0;
+      width: 100vw;
+      justify-content: center;
+    }
+    &__list {
+      font-size: 26px;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__item {
+      margin-right: 0;
+      //align-items: center;
     }
   }
 }

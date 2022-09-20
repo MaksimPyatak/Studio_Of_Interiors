@@ -309,10 +309,11 @@ main {
 
 .toolbar {
   display: none;
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     display: block;
     width: 100%;
     height: 55px;
+    background: #ffffff;
   }
   &__conteiner {
     width: 100%;

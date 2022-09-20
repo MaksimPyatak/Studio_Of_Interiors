@@ -1,7 +1,6 @@
 const iconMenu = document.querySelector('.menu__burger');
 if (iconMenu){
    const menuBoxList = document.querySelector('.menu__box-list');
-   //const headerMenu = document.querySelector('.header__menu');
    const headerZero = document.querySelector('.header__zero');
    const firstSection = document.querySelector('.first-section__swiper');
    const menuBurgerIcon = document.querySelector('.menu__burger-icon');
@@ -9,7 +8,6 @@ if (iconMenu){
    iconMenu.addEventListener("click", function (e) {
       document.body.classList.toggle('_lock');
       menuBurgerIcon.classList.toggle('_active');
-      //headerMenu.classList.toggle('_active');
       headerZero.classList.toggle('_active');
       firstSection.classList.toggle('_active');
       menuBoxList.classList.toggle('_active');

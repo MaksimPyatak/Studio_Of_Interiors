@@ -179,9 +179,9 @@
 }
 
 @mixin vertical-h5(
+  $w,
   $color: rgba(255, 255, 255, 0.13),
   $background: rgba(255, 255, 255, 0.04),
-  $w,
   $h: 11px
 ) {
   width: $w;
@@ -199,7 +199,7 @@
   &::before {
     content: " ";
     position: absolute;
-    top: 35%;
+    top: 50%;
     display: block;
     background: $background;
     left: 0;

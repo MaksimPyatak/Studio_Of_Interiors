@@ -14,9 +14,9 @@
 }
 @mixin button(
   $background: none,
+  $color: inherit,
   $border-width: 1px,
-  $border-color: rgba(253, 253, 253, 0.32),
-  $color: inherit
+  $border-color: rgba(253, 253, 253, 0.32)
 ) {
   width: 183px;
   height: 48px;

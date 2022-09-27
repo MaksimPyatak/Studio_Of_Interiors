@@ -1,5 +1,160 @@
 <div id="poopup" class="poopup">
   <div class="poopup__body">
-    <div class="poopup__content"></div>
+    <form
+      id="poopup-form"
+      class="poopup__content"
+      action="#"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <fieldset form="poopup-form" class="poopup__first-box">
+        <div class="poopup__first-conteiner conteiner">
+          <h3>Calculate the cost of work</h3>
+          <div class="poopup__personal-data">
+            <label class="poopup__name" for=""
+              >Name<input type="text" name="username"
+            /></label>
+            <label class="poopup__last-name" for=""
+              >Last name<input type="text" name="last-name"
+            /></label>
+            <label class="poopup__phone" for=""
+              >Phone<input type="tel" name="phone"
+            /></label>
+            <label class="poopup__city" for=""
+              >Your city<input type="text" name="city"
+            /></label>
+            <label class="poopup__email" for=""
+              >Email<input type="email" name="email"
+            /></label>
+            <label class="poopup__select-type" for=""
+              >Property type<select
+                form="poopup-form"
+                type="text"
+                name="select-type"
+              >
+                <option class="poopup__select-option" value="">Type 1</option>
+                <option class="poopup__select-option" value="">Type 2</option>
+                <option class="poopup__select-option" value="">Type 3</option>
+              </select></label
+            >
+            <label class="poopup__user-comment" for=""
+              >Your comment
+              <textarea type="text" name="user-comment"></textarea>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset form="poopup-form" class="poopup__second-box">
+        <div class="poopup__second-conteiner conteiner">
+          <div class="poopup__name-group-area">Area (m2)</div>
+          <div class="poopup__group-area">
+            <div class="poopup__option-item">
+              <label class="poopup__label" for="to-50"> to 50 </label>
+              <input
+              id="to-50"
+                class="poopup__radio-area"
+                type="radio"
+                name="area"
+                value="to 50"
+              />
+              <div class="poopup__line"></div>
+            </div>
+            <div class="poopup__option-item">
+              <label class="poopup__label" for="50-150"> 50-150 </label>
+              <input
+              id="50-150"
+                class="poopup__radio-area"
+                type="radio"
+                name="area"
+                value="50-150"
+              />
+              <div class="poopup__line"></div>
+            </div>
+            <div class="poopup__option-item">
+              <label class="poopup__label" for="150-250"> 150-250 </label>
+              <input
+              id="150-250"
+                class="poopup__radio-area"
+                type="radio"
+                name="area"
+                value="150-250"
+              />
+              <div class="poopup__line"></div>
+            </div>            
+            <div class="poopup__option-item">
+              <label class="poopup__label" for="250-400"> 250-400 </label>
+              <input
+              id="250-400"
+                class="poopup__radio-area"
+                type="radio"
+                name="area"
+                value="250-400"
+              />
+              <div class="poopup__line"></div>
+            </div>
+            <div class="poopup__option-item">
+              <label class="poopup__label" for="400-600"> 400-600 </label>
+              <input
+              id="400-600"
+                class="poopup__radio-area"
+                type="radio"
+                name="area"
+                value="400-600"
+              />
+              <div class="poopup__line"></div>
+            </div>
+            <div class="poopup__option-item">
+              <label class="poopup__label" for="600-800"> 600-800 </label>
+              <input
+              id="600-800"
+                class="poopup__radio-area"
+                type="radio"
+                name="area"
+                value="600-800"
+              />
+              <div class="poopup__line"></div>
+            </div>
+            <div class="poopup__option-item">
+              <label class="poopup__label" for="800-1000"> 800-1000 </label>
+              <input
+              id="800-1000"
+                class="poopup__radio-area"
+                type="radio"
+                name="area"
+                value="800-1000"
+              />
+              <div class="poopup__line"></div>
+            </div>
+            <div class="poopup__option-item">
+               <label class="poopup__label" for="1000+"> 1000+ </label>
+               <input
+               id="1000+"
+                 class="poopup__radio-area"
+                 type="radio"
+                 name="area"
+                 value="1000+"
+               />
+               <div class="poopup__line"></div>
+             </div>
+          </div>
+          <div class="poopup__group-photo">
+            <div class="poopup__item-photo">
+               <input type="file" name="photo" id="photo" 
+               accept="image/*">
+               <label for="photo">
+                  <p class="poopup__coement-photo">Attach your file</p>
+                  <p class="poopup__note-photo">File size not more than 10 MB</p>
+               </label>
+            </div>
+            <input type="submit" value="Send Request" class="poopup__buttom"></input>
+          </div>
+          <div class="poopup__content">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+         </div>
+        </div>
+      </fieldset>
+      <form></form>
+    </form>
   </div>
 </div>

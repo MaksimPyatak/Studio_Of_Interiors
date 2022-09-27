@@ -221,3 +221,133 @@
 //    }
 //  }
 //}
+
+@mixin example-project {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  a {
+    width: 14.65vw; //Забезпечити збереження пропорції через JS
+    height: 18.96vw;
+    position: absolute;
+    &:nth-child(1) {
+      bottom: 144px;
+      left: 25.57%;
+      transform: rotate(-5.99deg);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: rotate(0deg) scale(1.2);
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+    }
+    &:nth-child(2) {
+      bottom: 164px;
+      left: 30.57%;
+      transform: rotate(-0.33deg);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: rotate(0deg) scale(1.2);
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+    }
+    &:nth-child(3) {
+      bottom: 168.4px;
+      left: 33.61%;
+      transform: rotate(-5.81deg);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: rotate(0deg) scale(1.2);
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+    }
+    &:nth-child(4) {
+      bottom: 196.8px;
+      left: 38.56%;
+      transform: rotate(-1.72deg);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: rotate(0deg) scale(1.2);
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+    }
+    &:nth-child(5) {
+      bottom: 214.11px;
+      left: 42.06%;
+      transform: rotate(-10.5deg);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: rotate(0deg) scale(1.2);
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+    }
+    &:nth-child(6) {
+      bottom: 235.73px;
+      left: 45.56%;
+      transform: rotate(-5.99deg);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: rotate(0deg) scale(1.2);
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+    }
+    &:nth-child(7) {
+      bottom: 255.79px;
+      left: 50.65%;
+      transform: rotate(-0.33deg);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: rotate(0deg) scale(1.2);
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+    }
+    &:nth-child(8) {
+      bottom: 260.41px;
+      left: 53.7%;
+      transform: rotate(-5.81deg);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: rotate(0deg) scale(1.2);
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+    }
+    &:nth-child(9) {
+      bottom: 288.81px;
+      left: 58.65%;
+      transform: rotate(-1.72deg);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: rotate(0deg) scale(1.2);
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+    }
+    &:nth-child(10) {
+      bottom: 306.12px;
+      left: 62.15%;
+      transform: rotate(-10.5deg);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: rotate(0deg) scale(1.2);
+        transition: all 0.2s ease;
+        z-index: 2;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}

@@ -243,7 +243,9 @@
                 </div>
               </a>
             </div>
-            <div class="third-section__last-box">
+            @@include('html/elements/example-box.html',{"class":
+            "third-section__last-box"})
+            <!--<div class="third-section__last-box">
               <div class="third-section__last-box-conteiner">
                 <div class="third-section__vertical-request-box">
                   <div class="third-section__vertical-request-text">
@@ -297,12 +299,13 @@
                   <img src="@img/third-section/25.png" alt="" />
                 </a>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
       </main>
       @@include('html/footer.html',{})
     </div>
+    @@include('html/elements/poop-up.html',{})
     <script src="js/app.min.js"></script>
   </body>
 </html>

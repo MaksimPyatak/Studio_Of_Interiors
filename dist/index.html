@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css">
-	<title>Studio of interiors</title>
+  <head>
+  <meta charset="UTF-8" />
+  <meta
+    http-equiv="X-UA-Compatible, Content-Security-Policy"
+    content="IE=edge 'unsafe-inline'"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Studio of interiors</title>
 </head>
+
 
   <body>
     <div class="wrapper">
@@ -73,17 +77,17 @@
             <li class="menu__item">
               <a href="#" class="menu__link">Contacts</a>
             </li>
-            <li class="menu__item_button button">
+            <a href="#popup" class="menu__item_button button">
               <div class="button__text">Send Request</div>
-            </li>
+            </a>
           </ul>
         </div>
       </nav>
       <div class="menu__last-block">
         <div class="menu__language">En</div>
-        <div class="menu__button button">
+        <a href="#popup" class="menu__button button popup-link">
           <div class="button__text">Send Request</div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -379,9 +383,9 @@
         ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante
         felis, aliquam eu enim sed, ornare pretium velit.
       </p>
-      <div class="example-box__button button">
+      <a href="#popup" class="example-box__button button popup-link">
         <div class="button__text">Make request</div>
-      </div>
+      </a>
     </div>
   </div>
   <div class="example-box__example-project">
@@ -423,55 +427,55 @@
       </main>
       <footer></footer>
     </div>
-    <div id="poopup" class="poopup">
-  <div class="poopup__body">
+    <div id="popup" class="popup">
+  <div class="popup__body">
     <form
-      id="poopup-form"
-      class="poopup__content"
+      id="popup-form"
+      class="popup__content"
       action="#"
-      method="post"
+      method="get"
       enctype="multipart/form-data"
     >
-      <fieldset form="poopup-form" class="poopup__first-box">
-        <div class="poopup__first-conteiner conteiner">
+      <fieldset form="popup-form" class="popup__first-box">
+        <div class="popup__first-conteiner conteiner">
           <h3>Calculate the cost of work</h3>
-          <div class="poopup__personal-data">
-            <label class="poopup__name" for="" required>
+          <div class="popup__personal-data">
+            <label class="popup__name" for="" required>
              <p> Name</p>
              <input type="text" name="username" required/>
             </label>
-            <label class="poopup__last-name" for=""              >
+            <label class="popup__last-name" for=""              >
              <p> Last name</p>
              <input type="text" name="last-name"/>
             </label>
-            <label class="poopup__phone" for=""              >
+            <label class="popup__phone" for=""              >
              <p> Phone</p>
              <input type="tel" name="phone" required />
          </label>
-            <label class="poopup__city" for=""
+            <label class="popup__city" for=""
               >
              <p>Your city</p> 
               <input type="text" name="city" required/>
          </label>
-            <label class="poopup__email" for="">
+            <label class="popup__email" for="">
               <p> Email</p>
               <input type="email" name="email" required/>
             </label>
-            <label class="poopup__select-type" for="">
+            <label class="popup__select-type" for="">
               <p>Property type</p> 
               <select
-                form="poopup-form"
+                form="popup-form"
                 type="text"
                 name="select-type"
                 required
               >
-              <option class="poopup__select-option" value=""></option>
-                <option class="poopup__select-option" value="Type 1">Type 1</option>
-                <option class="poopup__select-option" value="Type 2">Type 2</option>
-                <option class="poopup__select-option" value="Type 3">Type 3</option>
+              <option class="popup__select-option" value=""></option>
+                <option class="popup__select-option" value="Type 1">Type 1</option>
+                <option class="popup__select-option" value="Type 2">Type 2</option>
+                <option class="popup__select-option" value="Type 3">Type 3</option>
               </select>
             </label>
-            <label class="poopup__user-comment" for=""
+            <label class="popup__user-comment" for=""
               >
               <p> Your comment</p>
               <textarea type="text" name="user-comment"></textarea>
@@ -480,118 +484,137 @@
         </div>
       </fieldset>
 
-      <fieldset form="poopup-form" class="poopup__second-box">
-        <div class="poopup__second-conteiner conteiner">
-          <div class="poopup__name-group-area">Area (m2)</div>
-          <div class="poopup__group-area">
-            <div class="poopup__option-item">
-              <label class="poopup__label" for="to-50"><p> to 50</p> </label>
+      <fieldset form="popup-form" class="popup__second-box">
+        <div class="popup__second-conteiner conteiner">
+          <div class="popup__name-group-area">Area (m2)</div>
+          <div class="popup__group-area">
+            <div class="popup__option-item">
+              <label class="popup__label" for="to-50"><p> to 50</p> </label>
               <input
               id="to-50"
-                class="poopup__radio-area"
+                class="popup__radio-area"
                 type="radio"
                 name="area"
                 value="to 50"
               />
-              <div class="poopup__line"></div>
+              <div class="popup__line"></div>
             </div>
-            <div class="poopup__option-item">
-              <label class="poopup__label" for="50-150"><p> 50-150</p> </label>
+            <div class="popup__option-item">
+              <label class="popup__label" for="50-150"><p> 50-150</p> </label>
               <input
               id="50-150"
-                class="poopup__radio-area"
+                class="popup__radio-area"
                 type="radio"
                 name="area"
                 value="50-150"
+                checked
               />
-              <div class="poopup__line"></div>
+              <div class="popup__line"></div>
             </div>
-            <div class="poopup__option-item">
-              <label class="poopup__label" for="150-250"> 150-250 </label>
+            <div class="popup__option-item">
+              <label class="popup__label" for="150-250"><p> 150-250</p> </label>
               <input
               id="150-250"
-                class="poopup__radio-area"
+                class="popup__radio-area"
                 type="radio"
                 name="area"
                 value="150-250"
               />
-              <div class="poopup__line"></div>
+              <div class="popup__line"></div>
             </div>            
-            <div class="poopup__option-item">
-              <label class="poopup__label" for="250-400"> 250-400 </label>
+            <div class="popup__option-item">
+              <label class="popup__label" for="250-400"> 
+              <p> 250-400 </p>
+            </label>
               <input
               id="250-400"
-                class="poopup__radio-area"
+                class="popup__radio-area"
                 type="radio"
                 name="area"
                 value="250-400"
               />
-              <div class="poopup__line"></div>
+              <div class="popup__line"></div>
             </div>
-            <div class="poopup__option-item">
-              <label class="poopup__label" for="400-600"> 400-600 </label>
+            <div class="popup__option-item">
+              <label class="popup__label" for="400-600">
+               <p> 400-600</p>
+             </label>
               <input
               id="400-600"
-                class="poopup__radio-area"
+                class="popup__radio-area"
                 type="radio"
                 name="area"
                 value="400-600"
               />
-              <div class="poopup__line"></div>
+              <div class="popup__line"></div>
             </div>
-            <div class="poopup__option-item">
-              <label class="poopup__label" for="600-800"> 600-800 </label>
+            <div class="popup__option-item">
+              <label class="popup__label" for="600-800">
+               <p> 600-800</p>
+             </label>
               <input
               id="600-800"
-                class="poopup__radio-area"
+                class="popup__radio-area"
                 type="radio"
                 name="area"
                 value="600-800"
               />
-              <div class="poopup__line"></div>
+              <div class="popup__line"></div>
             </div>
-            <div class="poopup__option-item">
-              <label class="poopup__label" for="800-1000"> 800-1000 </label>
+            <div class="popup__option-item">
+              <label class="popup__label" for="800-1000">
+               <p> 800-1000</p>
+             </label>
               <input
               id="800-1000"
-                class="poopup__radio-area"
+                class="popup__radio-area"
                 type="radio"
                 name="area"
                 value="800-1000"
               />
-              <div class="poopup__line"></div>
+              <div class="popup__line"></div>
             </div>
-            <div class="poopup__option-item">
-               <label class="poopup__label" for="1000+"> 1000+ </label>
+            <div class="popup__option-item">
+               <label class="popup__label" for="1000+">
+                  <p> 1000+</p>
+                </label>
                <input
                id="1000+"
-                 class="poopup__radio-area"
+                 class="popup__radio-area"
                  type="radio"
                  name="area"
                  value="1000+"
                />
-               <div class="poopup__line"></div>
+               <div class="popup__line"></div>
              </div>
           </div>
-          <div class="poopup__group-photo">
-            <div class="poopup__item-photo">
-               <input type="file" name="photo" id="photo" 
+          <div class="popup__group-photo">
+            <div class="popup__add-photo">
+               <input  class="popup__input-foto"  type="file" name="photo" id="photo" 
                accept="image/*">
-               <label for="photo">
-                  <p class="poopup__coement-photo">Attach your file</p>
-                  <p class="poopup__note-photo">File size not more than 10 MB</p>
-               </label>
+               <div class="popup__preview">
+                  <p></p>
+               </div>
             </div>
-            <input type="submit" value="Send Request" class="poopup__buttom"></input>
+            <div class="popup__item-photo">
+               <label for="photo">
+                  <div class="popup__img-add-photo"></div>
+               </label>
+               <div class="popup__coment-photo">
+                  <p> Attach your file</p>
+                  <p class="popup__note-photo">File size not more than 10 MB</p>
+               </div>
+            </div>
+            <input type="submit" value="Send Request" class="popup__buttom" id="btn"></input>
           </div>
-          <div class="poopup__text">
+          <div class="popup__text">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
          </div>
         </div>
       </fieldset>
     </form>
   </div>
-  <div class="poopup__criss-cross icon-criss-cross"></div>
+  <div class="popup__criss-cross icon-criss-cross close-popup"></div>
 </div>
 
     <script src="js/app.min.js"></script>

@@ -76,7 +76,10 @@ swiper.on('slideChange', function () {
 
 
 //Підключення файлу з бургер-меню
-import "./files/burger-menu.js";
+import "./modules/burger-menu.js";
 
 //Підключення файлу з динамічної зміни падінгів контейнера
 //import "./files/pdng-text-conteiner.js";
+
+//Підключення файлу створення мініатюри попередньогоперегляду завантаженого фалу
+import "./modules/input-file.js";

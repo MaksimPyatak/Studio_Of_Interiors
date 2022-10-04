@@ -23,6 +23,33 @@ const popupCloseIcon = document.querySelectorAll('.close-popup');
 if (popupCloseIcon.length > 0) {
    for (let index = 0; index < popupCloseIcon.length; index++) {
       const el = popupCloseIcon[index];
-      
+      el.addEventListener('click', function (e) {
+         popupClose(el.closest('.popup'));
+         e.preventDefault();
+      });
    }
+}
+
+function popupOpen(curentPopup) {
+   if (curentPopup && unlock) {
+      const popupActive = document.querySelector('.popup.open');
+      if (popupActive) {
+         popupClose(popupActive, false)
+      } else {
+         bodyLock();
+      }
+      curentPopup.classList.add('open');
+      curentPopup.addEventListener("click", function (e) {
+         if (!e.target.closest('.popup__body')) {
+            popupClose(e.target.closest('.popup'));
+         }
+      })
+   }
+}
+
+
+
+function bodyLock() {
+   const lockPaddingVaue = window.innerWidth - document.querySelector('.wraper').offsetWidth + 'px';
+
 }

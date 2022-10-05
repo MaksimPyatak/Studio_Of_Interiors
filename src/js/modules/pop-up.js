@@ -47,9 +47,79 @@ function popupOpen(curentPopup) {
    }
 }
 
-
+function popupClose(popupActive, doUnlock = true) {
+   if (unlock) {
+      popupActive.classList.remove('open');
+      if (doUnlock) {
+         bodyUnlock();
+      }
+   }
+}
 
 function bodyLock() {
    const lockPaddingVaue = window.innerWidth - document.querySelector('.wraper').offsetWidth + 'px';
 
+   if (lockPadding.length > 0) {
+      for (let index = 0; index < lockPadding.length; index++) {
+         const el = lockPadding[index];
+         el.style.paddingRight = lockPaddingVaue;
+      }
+   }
+   body.style.paddingRight = lockPaddingVaue;
+   body.classList.add('lock');
+
+   unlock = false;
+   setTimeout(function () {
+      unlock = true;
+   }, timeout);
 }
+
+function bodyUnlock() {
+   setTimeout(function () {
+      if (lockPadding.length > 0) {       
+         for (let index = 0; index < lockPadding.length; index++) {
+            const el = lockPadding[index];
+            el.style.paddingRight = '0px';  
+         }
+      }
+      body.style.paddingRight = '0px';
+      body.classList.remove('lock');
+   }, timeout);
+
+   unlock = false;
+   setTimeout(function () {
+      unlock = true;
+   },timeout);
+}
+
+document.addEventListener('keydown', function name(e) {
+   if (e.key === Escape) {
+      const popupActive = document.querySelector('.popup.open');
+      popupClose(popupActive);
+   }
+})
+
+//(function () {
+//	// перевіряемо підтримку
+//	if (!Element.prototype.closest) {
+//		// реалізуємо
+//		Element.prototype.closest = function (css) {
+//			var node = this;
+//			while (node) {
+//				if (node.matches(css)) return node;
+//				else node = node.parentElement;
+//			}
+//			return null;
+//		};
+//	}
+//})();
+//(function () {
+//	// перевіряемо підтримку
+//	if (!Element.prototype.matches) {
+//		// визначаємо властивість
+//		Element.prototype.matches = Element.prototype.matchesSelector ||
+//			Element.prototype.webkitMatchesSelector ||
+//			Element.prototype.mozMatchesSelector ||
+//			Element.prototype.msMatchesSelector;
+//	}
+//})();

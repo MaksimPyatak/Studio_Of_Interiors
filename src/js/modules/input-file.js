@@ -1,6 +1,11 @@
 const input = document.querySelector('.poopup__input-foto');
-const preview = document.querySelector('.poopup__preview');
-input.addEventListener('change', updateImageDisplay);
+
+console.log(input); 
+const preview = document.querySelector('.popup__preview');
+if (input !== null) {
+   console.log(input); 
+   input.addEventListener('change', updateImageDisplay);
+}
 function updateImageDisplay() {
    while (preview.firstChild) {
       preview.removeChild(preview.firstChild);

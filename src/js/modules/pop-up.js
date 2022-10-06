@@ -1,7 +1,6 @@
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
-
 let unlock = true;
 
 const timeout = 800;
@@ -9,7 +8,7 @@ const timeout = 800;
 if (popupLinks.length > 0) {
    for (let index = 0; index < popupLinks.length; index++) {
       const popupLink = popupLinks[index];
-      popupLink.addEventListener("click", function (e) {
+      popupLink.addEventListener("click", function startPopup (e) {
          const popupName = popupLink.getAttribute('href').replace('#', '');
          const curentPopup = document.getElementById(popupName);
          popupOpen(curentPopup);
@@ -40,7 +39,7 @@ function popupOpen(curentPopup) {
       }
       curentPopup.classList.add('open');
       curentPopup.addEventListener("click", function (e) {
-         if (!e.target.closest('.popup__body')) {
+         if (!e.target.closest('.popup__content')) {
             popupClose(e.target.closest('.popup'));
          }
       })
@@ -57,7 +56,7 @@ function popupClose(popupActive, doUnlock = true) {
 }
 
 function bodyLock() {
-   const lockPaddingVaue = window.innerWidth - document.querySelector('.wraper').offsetWidth + 'px';
+   const lockPaddingVaue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 
    if (lockPadding.length > 0) {
       for (let index = 0; index < lockPadding.length; index++) {
@@ -66,7 +65,7 @@ function bodyLock() {
       }
    }
    body.style.paddingRight = lockPaddingVaue;
-   body.classList.add('lock');
+   body.classList.add('_lock');
 
    unlock = false;
    setTimeout(function () {
@@ -83,7 +82,7 @@ function bodyUnlock() {
          }
       }
       body.style.paddingRight = '0px';
-      body.classList.remove('lock');
+      body.classList.remove('_lock');
    }, timeout);
 
    unlock = false;
@@ -93,7 +92,9 @@ function bodyUnlock() {
 }
 
 document.addEventListener('keydown', function name(e) {
-   if (e.key === Escape) {
+   console.log(e.key);
+   //const esc = Escape;
+   if (e.code == 'Escape') {
       const popupActive = document.querySelector('.popup.open');
       popupClose(popupActive);
    }

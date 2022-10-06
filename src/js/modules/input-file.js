@@ -1,9 +1,7 @@
-const input = document.querySelector('.poopup__input-foto');
+const input = document.querySelector('.popup__input-foto');
 
-console.log(input); 
 const preview = document.querySelector('.popup__preview');
 if (input !== null) {
-   console.log(input); 
    input.addEventListener('change', updateImageDisplay);
 }
 function updateImageDisplay() {
@@ -23,10 +21,6 @@ function updateImageDisplay() {
          let fileName = file.name;
          fileName = (fileName.slice(0, 30)) + `...`;
          if (file.size > 1048577) {
-            //const photo = document.getElementById("photo");
-            //console.log(photo);
-            //photo.setCustomValidity("File name  Update your selection.")
-            //return;
             para.textContent = `File name ${fileName}: Not a valid file size. Update your selection.`;
             para.style.color = "red";
             btn.disabled = true;

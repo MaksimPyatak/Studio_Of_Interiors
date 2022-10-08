@@ -14,3 +14,38 @@ export function isWebp() {
 		document.documentElement.classList.add(className);
 	});
 }
+//------------------------------
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Підключення  прелоудерa
+
+export function preloaderF(delay) {
+   //const delay = 10000;
+   console.log(delay);
+   const preloader = document.querySelector('.preloader');
+   preloader.classList.add('loaded_hiding');
+   window.setTimeout(function () {
+      preloader.classList.add('loaded');
+      preloader.classList.remove('loaded_hiding');
+   }, delay);
+}
+//----------------------------------
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Підключення файлу з бургер-меню
+export function burgerMenu() {   
+   const iconMenu = document.querySelector('.menu__burger');
+   if (iconMenu){
+      const menuBoxList = document.querySelector('.menu__box-list');
+      const headerZero = document.querySelector('.header__zero');
+      const firstSection = document.querySelector('.first-section__swiper');
+      const menuBurgerIcon = document.querySelector('.menu__burger-icon');
+      const menyHeading = document.querySelector('.menu__heading');
+      iconMenu.addEventListener("click", function (e) {
+         document.body.classList.toggle('_lock');
+         menuBurgerIcon.classList.toggle('_active');
+         headerZero.classList.toggle('_active');
+         firstSection.classList.toggle('_active');
+         menuBoxList.classList.toggle('_active');
+         menyHeading.classList.toggle('_active');
+      })
+   }
+}

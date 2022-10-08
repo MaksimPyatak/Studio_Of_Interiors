@@ -1,6 +1,8 @@
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
+let form;
+
 let unlock = true;
 
 const timeout = 800;
@@ -13,8 +15,8 @@ if (popupLinks.length > 0) {
          const curentPopup = document.getElementById(popupName);
          popupOpen(curentPopup);
          e.preventDefault();
-      })
-      
+         
+      })      
    }
 }
 
@@ -30,20 +32,36 @@ if (popupCloseIcon.length > 0) {
 }
 
 function popupOpen(curentPopup) {
+   let i=0
+   while (i<1) {
    if (curentPopup && unlock) {
       const popupActive = document.querySelector('.popup.open');
+      
       if (popupActive) {
-         popupClose(popupActive, false)
+         form = popupActive.querySelector('form');
+         if (form) {
+            let error = formValidate();
+            if (error === 0) {
+               popupClose(popupActive, false)
+            } else {
+               alert('Fill in the required fields!');
+               break;
+            }
+         } else {
+            popupClose(popupActive, false)
+         }           
       } else {
          bodyLock();
       }
       curentPopup.classList.add('open');
       curentPopup.addEventListener("click", function (e) {
-         if (!e.target.closest('.popup__content')) {
+         if (!e.target.closest('.close-area')) {
             popupClose(e.target.closest('.popup'));
-         }
-      })
-   }
+         }  
+      })      
+      i = 1;
+   }   
+}
 }
 
 function popupClose(popupActive, doUnlock = true) {
@@ -56,8 +74,7 @@ function popupClose(popupActive, doUnlock = true) {
 }
 
 function bodyLock() {
-   const lockPaddingVaue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-
+   const lockPaddingVaue = window.innerWidth - document.querySelector('body').offsetWidth + 'px';
    if (lockPadding.length > 0) {
       for (let index = 0; index < lockPadding.length; index++) {
          const el = lockPadding[index];
@@ -92,7 +109,6 @@ function bodyUnlock() {
 }
 
 document.addEventListener('keydown', function name(e) {
-   console.log(e.key);
    //const esc = Escape;
    if (e.code == 'Escape') {
       const popupActive = document.querySelector('.popup.open');
@@ -100,27 +116,37 @@ document.addEventListener('keydown', function name(e) {
    }
 })
 
-//(function () {
-//	// перевіряемо підтримку
-//	if (!Element.prototype.closest) {
-//		// реалізуємо
-//		Element.prototype.closest = function (css) {
-//			var node = this;
-//			while (node) {
-//				if (node.matches(css)) return node;
-//				else node = node.parentElement;
-//			}
-//			return null;
-//		};
-//	}
-//})();
-//(function () {
-//	// перевіряемо підтримку
-//	if (!Element.prototype.matches) {
-//		// визначаємо властивість
-//		Element.prototype.matches = Element.prototype.matchesSelector ||
-//			Element.prototype.webkitMatchesSelector ||
-//			Element.prototype.mozMatchesSelector ||
-//			Element.prototype.msMatchesSelector;
-//	}
-//})();
+function formValidate() {
+   let error = 0;
+   let formReq = document.querySelectorAll('._req');
+
+   for (let index = 0; index < formReq.length; index++) {
+      const input = formReq[index];
+      formRemoveError(input);
+
+      if (input.classList.contains('_email')) {
+         if(emailTest(input)){
+            formAddError(input);
+            error++;
+        }
+      } else {
+         if (input.value === ""){
+             formAddError(input);
+             error++;
+         }
+     }
+   }
+   return error;
+}
+
+function formAddError(input) {
+   input.parentElement.classList.add('_error');
+   input.classList.add('_error');
+}
+function formRemoveError(input) {
+   input.parentElement.classList.remove('_error');
+   input.classList.remove('_error');
+}
+function emailTest(input) {
+   return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}

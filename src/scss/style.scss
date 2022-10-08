@@ -31,6 +31,8 @@ body {
   overflow: hidden;
 }
 
+@import "preloader";
+
 .wrapper {
   max-width: 1440px;
   min-height: 100%;
@@ -760,13 +762,13 @@ main {
       max-width: 49.46%;
       width: auto;
       height: auto;
-      @media (min-width: 1024px) {
+      @media (max-width: 1024px) {
         max-width: 37.086%;
       }
-      @media (min-width: 678px) {
+      @media (max-width: 678px) {
         max-width: 37.35%;
       }
-      @media (min-width: 375px) {
+      @media (max-width: 375px) {
         max-width: 37%;
       }
     }
@@ -775,3 +777,4 @@ main {
 }
 
 @import "pop-up";
+@import "pop-up2";

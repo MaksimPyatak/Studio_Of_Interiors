@@ -33,6 +33,7 @@
   cursor: pointer;
   div {
     margin: auto auto;
+    color: $color;
   }
   @media (max-width: 1024px) {
     height: 42px;

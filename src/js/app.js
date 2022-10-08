@@ -1,4 +1,5 @@
 import * as flsFunctions from "./modules/functions.js";
+//import {preloaderF} from "./modules/preloader.js";
 
 flsFunctions.isWebp();
 
@@ -41,7 +42,13 @@ let nomberSlide;
 let prev;
 let next;
 
+
 window.onload = function () {
+   
+   //------Підключення  прелоудерa---------
+   flsFunctions.preloaderF(); 
+   //--------------------------------------
+   
    nomberSlide = swiper.activeIndex;
    prev = nomberSlide;
    if (prev < 10) {
@@ -57,6 +64,7 @@ window.onload = function () {
       nextNomberSlide.textContent = next;
    }
 };
+
 swiper.on('slideChange', function () {
    nomberSlide = swiper.activeIndex;
    prev = nomberSlide;
@@ -76,7 +84,8 @@ swiper.on('slideChange', function () {
 
 
 //Підключення файлу з бургер-меню
-import "./modules/burger-menu.js";
+//import "./modules/burger-menu.js";
+flsFunctions.burgerMenu();
 
 //Підключення файлу з динамічної зміни падінгів контейнера
 //import "./files/pdng-text-conteiner.js";
@@ -88,4 +97,7 @@ import "./modules/input-file.js";
 import "./modules/pop-up.js";
 
 //Підключення файлу відправки форми без перезавантаження вікна
-import "./modules/sending-data.js";
+//import "./modules/sending-data.js";
+
+//Підключення файлу прелоудер
+//import "./modules/preloader.js";

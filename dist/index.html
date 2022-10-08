@@ -13,6 +13,10 @@
 
 
   <body>
+    <div class="preloader">
+  <div class="preloader__content"></div>
+</div>
+
     <div class="wrapper">
       <header class="header lock-padding">
   <div class="header__container">
@@ -77,7 +81,7 @@
             <li class="menu__item">
               <a href="#" class="menu__link">Contacts</a>
             </li>
-            <a href="#popup" class="menu__item_button button">
+            <a href="#popup" class="menu__item_button button popup-link">
               <div class="button__text">Send Request</div>
             </a>
           </ul>
@@ -431,7 +435,7 @@
   <div class="popup__body">
     <form
       id="popup-form"
-      class="popup__content"
+      class="popup__content close-area"
       action="#"
       method="get"
       enctype="multipart/form-data"
@@ -441,43 +445,48 @@
           <h3>Calculate the cost of work</h3>
           <div class="popup__personal-data">
             <label class="popup__name" for="" required>
-             <p> Name</p>
-             <input type="text" name="username" required/>
+              <p>Name</p>
+              <input type="text" name="username" required class="_req" />
             </label>
-            <label class="popup__last-name" for=""              >
-             <p> Last name</p>
-             <input type="text" name="last-name"/>
+            <label class="popup__last-name" for="">
+              <p>Last name</p>
+              <input type="text" name="last-name" />
             </label>
-            <label class="popup__phone" for=""              >
-             <p> Phone</p>
-             <input type="tel" name="phone" required />
-         </label>
-            <label class="popup__city" for=""
-              >
-             <p>Your city</p> 
-              <input type="text" name="city" required/>
-         </label>
+            <label class="popup__phone" for="">
+              <p>Phone</p>
+              <input type="tel" name="phone" required class="_req" />
+            </label>
+            <label class="popup__city" for="">
+              <p>Your city</p>
+              <input type="text" name="city" required class="_req" />
+            </label>
             <label class="popup__email" for="">
-              <p> Email</p>
-              <input type="email" name="email" required/>
+              <p>Email</p>
+              <input type="email" name="email" required class="_req _email" />
             </label>
             <label class="popup__select-type" for="">
-              <p>Property type</p> 
+              <p>Property type</p>
               <select
                 form="popup-form"
                 type="text"
                 name="select-type"
                 required
+                class="_req"
               >
-              <option class="popup__select-option" value=""></option>
-                <option class="popup__select-option" value="Type 1">Type 1</option>
-                <option class="popup__select-option" value="Type 2">Type 2</option>
-                <option class="popup__select-option" value="Type 3">Type 3</option>
+                <option class="popup__select-option" value=""></option>
+                <option class="popup__select-option" value="Type 1">
+                  Type 1
+                </option>
+                <option class="popup__select-option" value="Type 2">
+                  Type 2
+                </option>
+                <option class="popup__select-option" value="Type 3">
+                  Type 3
+                </option>
               </select>
             </label>
-            <label class="popup__user-comment" for=""
-              >
-              <p> Your comment</p>
+            <label class="popup__user-comment" for="">
+              <p>Your comment</p>
               <textarea type="text" name="user-comment"></textarea>
             </label>
           </div>
@@ -489,9 +498,9 @@
           <div class="popup__name-group-area">Area (m2)</div>
           <div class="popup__group-area">
             <div class="popup__option-item">
-              <label class="popup__label" for="to-50"><p> to 50</p> </label>
+              <label class="popup__label" for="to-50"><p>to 50</p> </label>
               <input
-              id="to-50"
+                id="to-50"
                 class="popup__radio-area"
                 type="radio"
                 name="area"
@@ -500,9 +509,9 @@
               <div class="popup__line"></div>
             </div>
             <div class="popup__option-item">
-              <label class="popup__label" for="50-150"><p> 50-150</p> </label>
+              <label class="popup__label" for="50-150"><p>50-150</p> </label>
               <input
-              id="50-150"
+                id="50-150"
                 class="popup__radio-area"
                 type="radio"
                 name="area"
@@ -512,22 +521,22 @@
               <div class="popup__line"></div>
             </div>
             <div class="popup__option-item">
-              <label class="popup__label" for="150-250"><p> 150-250</p> </label>
+              <label class="popup__label" for="150-250"><p>150-250</p> </label>
               <input
-              id="150-250"
+                id="150-250"
                 class="popup__radio-area"
                 type="radio"
                 name="area"
                 value="150-250"
               />
               <div class="popup__line"></div>
-            </div>            
+            </div>
             <div class="popup__option-item">
-              <label class="popup__label" for="250-400"> 
-              <p> 250-400 </p>
-            </label>
+              <label class="popup__label" for="250-400">
+                <p>250-400</p>
+              </label>
               <input
-              id="250-400"
+                id="250-400"
                 class="popup__radio-area"
                 type="radio"
                 name="area"
@@ -537,10 +546,10 @@
             </div>
             <div class="popup__option-item">
               <label class="popup__label" for="400-600">
-               <p> 400-600</p>
-             </label>
+                <p>400-600</p>
+              </label>
               <input
-              id="400-600"
+                id="400-600"
                 class="popup__radio-area"
                 type="radio"
                 name="area"
@@ -550,10 +559,10 @@
             </div>
             <div class="popup__option-item">
               <label class="popup__label" for="600-800">
-               <p> 600-800</p>
-             </label>
+                <p>600-800</p>
+              </label>
               <input
-              id="600-800"
+                id="600-800"
                 class="popup__radio-area"
                 type="radio"
                 name="area"
@@ -563,10 +572,10 @@
             </div>
             <div class="popup__option-item">
               <label class="popup__label" for="800-1000">
-               <p> 800-1000</p>
-             </label>
+                <p>800-1000</p>
+              </label>
               <input
-              id="800-1000"
+                id="800-1000"
                 class="popup__radio-area"
                 type="radio"
                 name="area"
@@ -575,41 +584,59 @@
               <div class="popup__line"></div>
             </div>
             <div class="popup__option-item">
-               <label class="popup__label" for="1000+">
-                  <p> 1000+</p>
-                </label>
-               <input
-               id="1000+"
-                 class="popup__radio-area"
-                 type="radio"
-                 name="area"
-                 value="1000+"
-               />
-               <div class="popup__line"></div>
-             </div>
+              <label class="popup__label" for="1000+">
+                <p>1000+</p>
+              </label>
+              <input
+                id="1000+"
+                class="popup__radio-area"
+                type="radio"
+                name="area"
+                value="1000+"
+              />
+              <div class="popup__line"></div>
+            </div>
           </div>
           <div class="popup__group-photo">
             <div class="popup__add-photo">
-               <input  class="popup__input-foto"  type="file" name="photo" id="photo" 
-               accept="image/*">
-               <div class="popup__preview">
-                  <p></p>
-               </div>
+              <input
+                class="popup__input-foto _req"
+                type="file"
+                name="photo"
+                id="photo"
+                accept="image/*"
+              />
+              <div class="popup__preview">
+                <p></p>
+              </div>
             </div>
             <div class="popup__item-photo">
-               <label for="photo">
-                  <div class="popup__img-add-photo"></div>
-               </label>
-               <div class="popup__coment-photo">
-                  <p> Attach your file</p>
-                  <p class="popup__note-photo">File size not more than 10 MB</p>
-               </div>
+              <label for="photo">
+                <div class="popup__img-add-photo"></div>
+              </label>
+              <div class="popup__coment-photo">
+                <p>Attach your file</p>
+                <p class="popup__note-photo">File size not more than 10 MB</p>
+              </div>
             </div>
-            <input type="submit" value="Send Request" class="popup__buttom" id="btn"></input>
+            <!--<a href="#popup2">-->
+            <input
+              type="submit"
+              value="Send Request"
+              class="popup__buttom popup-link"
+              id="btn"
+              href="#popup2"
+            />
+            <!--</input>-->
+            <!--</a>-->
           </div>
           <div class="popup__text">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
-         </div>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English.
+          </div>
         </div>
       </fieldset>
     </form>
@@ -617,9 +644,23 @@
   <div class="popup__criss-cross icon-criss-cross close-popup"></div>
 </div>
 
-    <div id="popup2" class="popup">
-  <div class="popup__body"></div>
-  <div class="popup__criss-cross icon-criss-cross close-popup"></div>
+    <div id="popup2" class="popup2 popup">
+  <div class="popup2__body">
+    <div class="popup2__content close-area">
+      <!--<div class="popup2__box">-->
+      <h4 class="popup2__title">Thank you for your message!</h4>
+      <div class="popup2__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+        ullamcorper eu mauris vitae posuere. Ut at luctus ligula. Nunc ante
+        felis, aliquam eu enim sed, ornare pretium velit.
+      </div>
+      <a href="#popup" class="popup2__button button popup-link">
+        <div class="button__text">Send again</div>
+      </a>
+      <!--</div>-->
+    </div>
+  </div>
+  <div class="popup2__criss-cross icon-criss-cross close-popup"></div>
 </div>
 
     <script src="js/app.min.js"></script>

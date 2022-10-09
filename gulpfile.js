@@ -1,11 +1,11 @@
-// Основной модуль
+// Основний модуль
 import gulp from "gulp";
-// Импорт путей
+// Імпорт шляхів
 import { path } from "./gulp/config/path.js";
-// Импорт общих плагинов
+// Імпорт загальних плагінів
 import { plugins } from "./gulp/config/plugins.js";
 
-// Передаем значения в глобальную переменную
+// Передаємо значення в глобальну змінну
 global.app = {
 	isBuild: process.argv.includes('--build'),
 	isDev: !process.argv.includes('--build'),
@@ -14,7 +14,7 @@ global.app = {
 	plugins: plugins
 }
 
-// Импорт задач
+// Імпорт завдань
 import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
@@ -28,7 +28,7 @@ import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
 import { notfound } from "./gulp/tasks/notfound.js";
 
-// Наблюдатель за изменениями в файлах
+// Спостерігач за змінами у файлах
 function watcher() {
 	gulp.watch(path.watch.files, copy);
 	gulp.watch(path.watch.html, html); //gulp.series(html, ftp)
@@ -37,24 +37,24 @@ function watcher() {
 	gulp.watch(path.watch.images, images);
 }
 
-// Последовательная обработака шрифтов
+// Послідовна обробка шрифтів
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
-// Основные задачи
+// Основні завдання
 const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSpriteTask, notfound));
 
-// Построение сценариев выполнения задач
+// Побудова сценаріїв виконання завдань
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftp);
 
-// Экспорт сценариев
+// Экспорт сценаріїв
 export { svgSpriteTask }
 export { dev }
 export { build }
 export { deployZIP }
 export { deployFTP }
 
-// Выполнение сценария по умолчанию
+// Виконання сценаріїв за замовченням
 gulp.task('default', dev);

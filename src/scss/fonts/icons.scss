@@ -13,7 +13,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-slogan:before {
+  content: "\e90c";
+}
 .icon-Group:before {
   content: "\e905";
 }

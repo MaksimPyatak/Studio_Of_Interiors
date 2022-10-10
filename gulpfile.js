@@ -26,7 +26,6 @@ import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { svgSpriteTask } from "./gulp/tasks/svg-sprive.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
-import { notfound } from "./gulp/tasks/notfound.js";
 
 // Спостерігач за змінами у файлах
 function watcher() {
@@ -41,7 +40,7 @@ function watcher() {
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // Основні завдання
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSpriteTask, notfound));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, svgSpriteTask));
 
 // Побудова сценаріїв виконання завдань
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));

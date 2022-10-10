@@ -6,6 +6,7 @@
   box-sizing: content-box;
 }
 @mixin text-container {
+  //!!!!!!!!!!!!
   max-width: 768px;
   height: 100%;
   padding: 0 16.15%; //var(--pdng-text-conteiner)
@@ -20,7 +21,6 @@
 ) {
   width: 183px;
   height: 48px;
-  //  padding: 17px 48px;
   border: $border-width solid $border-color;
   background: $background;
   display: flex;
@@ -89,6 +89,10 @@
   justify-content: space-between;
   align-items: center;
   color: $color;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.06em;
 }
 
 @mixin data-box() {
@@ -187,6 +191,10 @@
   color: $color;
   display: flex;
   padding: 0 0 0 70px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
   //  transform: rotate(-90deg) translate(($h-$w) / 2, ($h-$w) / 2);
 
   &::before {
@@ -342,5 +350,61 @@
 
   @media (max-width: 1024px) {
     display: none;
+  }
+}
+
+@mixin footer($color-text: #828282, $color-slogan: #ffffff) {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    &__conteiner {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      color: $color-text;
+      @include container;
+    }
+
+    &__copyright {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__slogan {
+      width: 218px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__first-box {
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &__lst-box {
+      width: 84px;
+      height: 26px;
+      color: $color-slogan;
+      display: grid;
+      grid-template: repeat(2, 1fr) / 1fr;
+    }
+
+    &__slogan-first {
+      justify-self: start;
+    }
+
+    &__slogan-lst {
+      justify-self: end;
+    }
   }
 }

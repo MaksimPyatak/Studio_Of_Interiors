@@ -2608,9 +2608,6 @@ main {
 .contacts {
   width: 100%;
   position: relative;
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: overlay;
 }
 .contacts__background {
   position: absolute;
@@ -2630,7 +2627,6 @@ main {
   width: 100%;
   height: 100%;
   position: absolute;
-  object-fit: cover;
   background: rgba(0, 0, 0, 0.95);
 }
 .contacts__conteiner {

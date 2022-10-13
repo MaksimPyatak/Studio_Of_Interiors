@@ -152,10 +152,6 @@ main {
 }
 .scrollbar-navigation .swiper-button-next {
   position: static;
-  //  position: absolute;
-  //  z-index: 5;
-  //  top: 61.83%;
-  //  left: 85.53%;
   font-weight: 300;
   font-size: 11px;
   line-height: 1.18%;
@@ -776,6 +772,9 @@ main {
   }
   @import "example-box";
 }
+
+@import "email_section";
+
 @import "contacts";
 
 @include footer;

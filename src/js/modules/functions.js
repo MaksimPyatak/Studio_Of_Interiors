@@ -17,17 +17,45 @@ export function isWebp() {
 //------------------------------
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //Підключення  прелоудерa
-
-export function preloaderF(delay) {
-   //const delay = 10000;
-   console.log(delay);
+export function preloaderF() {
+   const delay = 5000; //!Затримка
    const preloader = document.querySelector('.preloader');
-   preloader.classList.add('loaded_hiding');
+   const delayTransition = delay - 500;
+   const loadingTime = delayTransition - 500;
+   loadingIllustration(loadingTime);
+   window.setTimeout(function () {
+      preloader.classList.add('loaded_hiding');
+   }, delayTransition);
    window.setTimeout(function () {
       preloader.classList.add('loaded');
       preloader.classList.remove('loaded_hiding');
    }, delay);
 }
+
+//Відсотоку завантаження для прелоудера
+export function loadingIllustration(loadingTime) {
+   const variableElement = document.querySelector('.preloader__variable-element');
+   let percent = 0;
+   const delayStep = (loadingTime - 500) / 10;
+   console.log(delayStep);
+
+   variableElement.textContent = `${percent}%`;//
+   let text = variableElement.textContent;
+   //do {
+       let download = window.setInterval(function () {
+      percent = percent + 10;
+      variableElement.textContent = `${percent}%`;
+      let text = variableElement.textContent;
+      console.log(text);
+   }, delayStep);
+   if (percent = 100) {
+      clearInterval(download);
+   }
+//   } 
+//   while (percent != 100)
+//   variableElement.textContent = `LIGHT`;
+}
+
 //----------------------------------
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //Підключення файлу з бургер-меню

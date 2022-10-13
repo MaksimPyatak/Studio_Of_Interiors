@@ -18,7 +18,7 @@ export function isWebp() {
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //Підключення  прелоудерa
 export function preloaderF() {
-   const delay = 5000; //!Затримка
+   const delay = 2000; //!Затримка
    const preloader = document.querySelector('.preloader');
    const delayTransition = delay - 500;
    const loadingTime = delayTransition - 500;
@@ -32,7 +32,7 @@ export function preloaderF() {
    }, delay);
 }
 
-//Відсотоку завантаження для прелоудера
+//Відсоток завантаження для прелоудера
 export function loadingIllustration(loadingTime) {
    const variableElement = document.querySelector('.preloader__variable-element');
    let percent = 0;
@@ -41,19 +41,18 @@ export function loadingIllustration(loadingTime) {
 
    variableElement.textContent = `${percent}%`;//
    let text = variableElement.textContent;
-   //do {
-       let download = window.setInterval(function () {
+   do {
+      pageLoadin()
+      //window.setTimeout(pageLoadin, delayStep);
+   } while (percent != 100)
+   variableElement.textContent = `${percent}%`;
+
+   function pageLoadin() {
       percent = percent + 10;
       variableElement.textContent = `${percent}%`;
       let text = variableElement.textContent;
       console.log(text);
-   }, delayStep);
-   if (percent = 100) {
-      clearInterval(download);
    }
-//   } 
-//   while (percent != 100)
-//   variableElement.textContent = `LIGHT`;
 }
 
 //----------------------------------

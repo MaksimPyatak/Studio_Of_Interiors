@@ -18,8 +18,10 @@ export function isWebp() {
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //Підключення  прелоудерa
 export function preloaderF() {
-   const delay = 2000; //!Затримка
    const preloader = document.querySelector('.preloader');
+   if (preloader) {
+      
+   const delay = 3000; //!Затримка
    const delayTransition = delay - 500;
    const loadingTime = delayTransition - 500;
    loadingIllustration(loadingTime);
@@ -31,27 +33,42 @@ export function preloaderF() {
       preloader.classList.remove('loaded_hiding');
    }, delay);
 }
+}
 
 //Відсоток завантаження для прелоудера
 export function loadingIllustration(loadingTime) {
    const variableElement = document.querySelector('.preloader__variable-element');
    let percent = 0;
-   const delayStep = (loadingTime - 500) / 10;
-   console.log(delayStep);
-
-   variableElement.textContent = `${percent}%`;//
-   let text = variableElement.textContent;
-   do {
-      pageLoadin()
-      //window.setTimeout(pageLoadin, delayStep);
-   } while (percent != 100)
+   let delayStep = (loadingTime - 500) / 5;
    variableElement.textContent = `${percent}%`;
+   let text = variableElement.textContent;
+
+   let timeout;
+   timeout = setInterval(pageLoadin, delayStep);
+
+   //timeout();
+   //function timeout(){
+   //   delayStep = 5000;
+   //   window.setTimeout(pageLoadin(), 5000);
+   //   console.log(delayStep);
+   //   if (percent != 100) {
+   //      //pageLoadin()
+   //      //!!! setTimeout
+   //      timeout();
+   //   } 
+   //}
+
 
    function pageLoadin() {
-      percent = percent + 10;
-      variableElement.textContent = `${percent}%`;
+      percent = percent + 20;
+      variableElement.style.marginLeft = "5";
+      variableElement.textContent = `   ${percent}%`;
       let text = variableElement.textContent;
-      console.log(text);
+      if (percent == 100) {
+         clearInterval(timeout);
+         variableElement.classList.remove('space');
+         variableElement.textContent = `LIGHT`;         
+      }
    }
 }
 

@@ -49,20 +49,23 @@ window.onload = function () {
    
    flsFunctions.preloaderF(); 
    //--------------------------------------
-   
-   nomberSlide = swiper.activeIndex;
-   prev = nomberSlide;
-   if (prev < 10) {
-      prevNomberSlide.textContent = "0" + prev;
-   } else {
-      prevNomberSlide.textContent = prev;
-   };
+   let slider = document.querySelector('.swiper');
+
+   if (slider) {  
+      nomberSlide = swiper.activeIndex;
+      prev = nomberSlide;
+      if (prev < 10) {
+         prevNomberSlide.textContent = "0" + prev;
+      } else {
+         prevNomberSlide.textContent = prev;
+      };
     
-   next = nomberSlide+2;
-   if (next < 10) {
-      nextNomberSlide.textContent = "0" + next;
-   } else {
-      nextNomberSlide.textContent = next;
+      next = nomberSlide+2;
+      if (next < 10) {
+       nextNomberSlide.textContent = "0" + next;
+      } else {
+       nextNomberSlide.textContent = next;
+      }
    }
 };
 

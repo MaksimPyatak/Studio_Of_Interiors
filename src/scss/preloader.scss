@@ -31,9 +31,14 @@
     color: #fafafa;
     letter-spacing: 0.26em;
     text-transform: uppercase;
+    display: flex;
 
     @media (max-width: 1024px) {
       letter-spacing: normal;
     }
+  }
+
+  &__variable-element.space {
+    margin-left: 15px;
   }
 }

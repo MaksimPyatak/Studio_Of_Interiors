@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{ "title":"Studio of interiors" })
+
+  <body>
+    @@include('html/elements/preloader.html',{})
+    <div class="wrapper">
+      @@include('html/header.html',{})
+      <main class="page-news">
+        <div class="page-news__first-news-section first-news-section">
+          <div class="first-news-section__title-box">
+            <h2 class="first-news-section__title">Our latest news</h2>
+            <div class="first-news-section__tabs">
+              <ul>
+                <li>All</li>
+                <li>Blog</li>
+                <li>News</li>
+                <li>Advice from the designer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="page-news__last-news-section last-news-section">
+          <div class="last-news-section__swiper swiper">
+            <div class="swiper-wrapper swiper__wrapper">
+              <div class="swiper__slide swiper-slide"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      @@include('html/footer.html',{})
+    </div>
+    @@include('html/elements/pop-up.html',{})
+    @@include('html/elements/pop-up2.html',{})
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

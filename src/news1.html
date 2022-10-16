@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/head.html',{ "title":"Projects" })
+  @@include('html/head.html',{ "title":"Studio of interiors" })
 
   <body>
     @@include('html/elements/preloader.html',{})
     <div class="wrapper">
       @@include('html/header.html',{})
-      <main>
+      <main class="page-news">
         <div class="page-news__first-news-section first-news-section">
           <div class="first-news-section__title-box">
             <h2 class="first-news-section__title">Our latest news</h2>
@@ -44,23 +44,23 @@
               </div>
             </div>
             <div class="second-news-section__singlebox blog-preview">
-              <div class="second-news-section__content">
-                <a href="new.html" class="second-news-section__title">
-                  Non-standard plinth options
-                </a>
-              </div>
               <div class="second-news-section__img-box">
                 <img src="@img/news/Rectangle 2.5.jpg" alt="" />
               </div>
+              <div class="second-news-section__content">
+                <div class="second-news-section__title">
+                  Non-standard plinth options
+                </div>
+              </div>
             </div>
             <div class="second-news-section__singlebox blog-preview">
-              <div class="second-news-section__content">
-                <a href="new.html" class="second-news-section__title">
-                  Interior design, LCD Rybalsky
-                </a>
-              </div>
               <div class="second-news-section__img-box">
                 <img src="@img/news/Rectangle 2.9.jpg" alt="" />
+              </div>
+              <div class="second-news-section__content">
+                <div class="second-news-section__title">
+                  Interior design, LCD Rybalsky
+                </div>
               </div>
             </div>
             <div class="second-news-section__doblebox advice-preview">
@@ -79,6 +79,44 @@
               </div>
               <div class="second-news-section__img-box">
                 <img src="@img/news/Rectangle 2.3 (4).jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-news__pages-navigation-section">
+          <div class="pages-navigation-section__conteiner">
+            <a class="icon-arrow-right" href="new.htm"></a>
+            <a href="new.htm">1</a>
+            <a href="new.htm">2</a>
+            <a href="new.htm">3</a>
+            <div class="ages-navigation-section__points">...</div>
+            <a href="new.htm">15</a>
+            <a class="icon-arrow-right" href="new.htm"></a>
+          </div>
+        </div>
+        <div class="page-news__last-news-section">
+          <div class="last-news-section__background">
+            <img
+              class="last-news-section__img-background"
+              src="@img/news/Rectangle.jpg"
+              alt=""
+            />
+          </div>
+          <div class="last-news-section__content">
+            <div class="last-news-section__conteiner">
+              <div class="last-news-section__title"></div>
+              <div class="last-news-section__subtitle">
+                <div class="last-news-section__text"></div>
+                <form
+                  action="#"
+                  method="get"
+                  class="last-news-section__email-box"
+                >
+                  <input type="email" name="email" placeholder="Email" id="" />
+                  <div
+                    class="last-news-section__email-submit icon-arrow-right"
+                  ></div>
+                </form>
               </div>
             </div>
           </div>

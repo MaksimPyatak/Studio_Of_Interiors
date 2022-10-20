@@ -10,12 +10,12 @@
         <div class="page-news__first-news-section first-news-section">
           <div class="first-news-section__title-box">
             <h2 class="first-news-section__title">Our latest news</h2>
-            <div class="first-news-section__tabs">
-              <ul>
-                <li class="active-tab">All</li>
-                <li>Blog</li>
-                <li>News</li>
-                <li>Advice from the designer</li>
+            <div class="first-news-section__tabs tabs">
+              <ul class="tabs__list">
+                <li class="tabs__tab active-tab" id="all">All</li>
+                <li class="tabs__tab" id="blog">Blog</li>
+                <li class="tabs__tab" id="news-preview">News</li>
+                <li class="tabs__tab" id="advice">Advice from the designer</li>
               </ul>
               <div
                 class="first-news-section__opening icon-down-arrowhead"
@@ -25,27 +25,27 @@
         </div>
         <div class="page-news__second-news-section second-news-section">
           <div class="second-news-section__conteiner">
-            <div class="second-news-section__doblebox news-preview">
+            <div class="second-news-section__doblebox news-preview card">
               <div class="second-news-section__content">
-                <div class="second-news-section__title">
-                  5 smart tips for productive collaboration with the designer
-                </div>
+                @@include('html/elements/discover-more.html',{"class":
+                "second-news-section__discover-more", "text": "Discover more",
+                "href": "one-news.html"})
                 <div class="second-news-section__subtitle">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
                   vel gravida urna. Donec blandit sapien eu diam ullamcorper
                   euismod. Nam tempus pellentesque ligula ut aliquam.
                 </div>
-                @@include('html/elements/discover-more.html',{"class":
-                "second-news-section__discover-more", "text": "Discover more",
-                "href": "new.html"})
+                <div class="second-news-section__title">
+                  5 smart tips for productive collaboration with the designer
+                </div>
               </div>
               <div class="second-news-section__img-box">
                 <img src="@img/news/Rectangle 2.3 (4).jpg" alt="" />
               </div>
             </div>
-            <div class="second-news-section__singlebox blog-preview">
+            <div class="second-news-section__singlebox blog card">
               <div class="second-news-section__content">
-                <a href="new.html" class="second-news-section__title">
+                <a href="one-news" class="second-news-section__title">
                   Non-standard plinth options
                 </a>
               </div>
@@ -53,9 +53,9 @@
                 <img src="@img/news/Rectangle 2.5.jpg" alt="" />
               </div>
             </div>
-            <div class="second-news-section__singlebox blog-preview">
+            <div class="second-news-section__singlebox blog card">
               <div class="second-news-section__content">
-                <a href="new.html" class="second-news-section__title">
+                <a href="one-news" class="second-news-section__title">
                   Interior design, LCD Rybalsky
                 </a>
               </div>
@@ -63,22 +63,69 @@
                 <img src="@img/news/Rectangle 2.9.jpg" alt="" />
               </div>
             </div>
-            <div class="second-news-section__doblebox advice-preview">
+            <div class="second-news-section__doblebox advice card">
               <div class="second-news-section__content">
-                <div class="second-news-section__title">
-                  5 smart tips for productive collaboration with the designer
-                </div>
+                @@include('html/elements/discover-more.html',{"class":
+                "second-news-section__discover-more", "text": "Discover more",
+                "href": "one-news.html"})
                 <div class="second-news-section__subtitle">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
                   vel gravida urna. Donec blandit sapien eu diam ullamcorper
                   euismod. Nam tempus pellentesque ligula ut aliquam.
                 </div>
-                @@include('html/elements/discover-more.html',{"class":
-                "second-news-section__discover-more", "text": "Discover more",
-                "href": "new.html"})
+                <div class="second-news-section__title">
+                  5 smart tips for productive collaboration with the designer
+                </div>
               </div>
               <div class="second-news-section__img-box">
-                <img src="@img/news/Rectangle 2.3 (4).jpg" alt="" />
+                <img src="@img/news/Rectangle 2.3.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="page-news__pages-navigation-section pages-navigation-section"
+        >
+          <div class="pages-navigation-section__conteiner">
+            <a class="icon-arrow-right" href="new.htm"></a>
+            <a href="new.htm">1</a>
+            <a href="new.htm">2</a>
+            <a href="new.htm">3</a>
+            <div class="ages-navigation-section__points">...</div>
+            <a href="new.htm">15</a>
+            <a class="icon-arrow-right" href="new.htm"></a>
+          </div>
+        </div>
+        <div class="page-news__last-news-section last-news-section">
+          <div class="last-news-section__background">
+            <img
+              class="last-news-section__img-background"
+              src="@img/news/Rectangle.jpg"
+              alt=""
+            />
+          </div>
+          <div class="last-news-section__content">
+            <div class="last-news-section__conteiner">
+              <h2 class="last-news-section__title">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </h2>
+              <div class="last-news-section__subtitle">
+                <div class="last-news-section__text p1">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus
+                  ligula. Nunc ante felis, aliquam.
+                </div>
+                <form
+                  action="#"
+                  method="get"
+                  class="last-news-section__email-box"
+                >
+                  <input type="email" name="email" placeholder="Email" id="" />
+                  <a
+                    href="#"
+                    class="last-news-section__email-submit icon-arrow-right"
+                  ></a>
+                </form>
               </div>
             </div>
           </div>

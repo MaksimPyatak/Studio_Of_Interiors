@@ -21,7 +21,7 @@ export function preloaderF() {
    const preloader = document.querySelector('.preloader');
    if (preloader) {
       
-   const delay = 3000; //!Затримка
+   const delay = 2000; //!Затримка
    const delayTransition = delay - 500;
    const loadingTime = delayTransition - 500;
    loadingIllustration(loadingTime);

@@ -27,17 +27,17 @@
           <div class="second-news-section__conteiner">
             <div class="second-news-section__doblebox news-preview">
               <div class="second-news-section__content">
-                <div class="second-news-section__title">
-                  5 smart tips for productive collaboration with the designer
-                </div>
-                <div class="second-news-section__subtitle">
+                @@include('html/elements/discover-more.html',{"class":
+                "second-news-section__discover-more", "text": "Discover more",
+                "href": "one-news.html"})
+                <div class="second-news-section__subtitle p1">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
                   vel gravida urna. Donec blandit sapien eu diam ullamcorper
                   euismod. Nam tempus pellentesque ligula ut aliquam.
                 </div>
-                @@include('html/elements/discover-more.html',{"class":
-                "second-news-section__discover-more", "text": "Discover more",
-                "href": "new.html"})
+                <div class="second-news-section__title">
+                  5 smart tips for productive collaboration with the designer
+                </div>
               </div>
               <div class="second-news-section__img-box">
                 <img src="@img/news/Rectangle 2.3 (4).jpg" alt="" />
@@ -45,7 +45,7 @@
             </div>
             <div class="second-news-section__singlebox blog-preview">
               <div class="second-news-section__content">
-                <a href="new.html" class="second-news-section__title">
+                <a href="one-news.html" class="second-news-section__title">
                   Non-standard plinth options
                 </a>
               </div>
@@ -55,7 +55,7 @@
             </div>
             <div class="second-news-section__singlebox blog-preview">
               <div class="second-news-section__content">
-                <a href="new.html" class="second-news-section__title">
+                <a href="one-news.html" class="second-news-section__title">
                   Interior design, LCD Rybalsky
                 </a>
               </div>
@@ -65,20 +65,68 @@
             </div>
             <div class="second-news-section__doblebox advice-preview">
               <div class="second-news-section__content">
-                <div class="second-news-section__title">
-                  5 smart tips for productive collaboration with the designer
-                </div>
-                <div class="second-news-section__subtitle">
+                @@include('html/elements/discover-more.html',{"class":
+                "second-news-section__discover-more", "text": "Discover more",
+                "href": "one-news.html"})
+                <div class="second-news-section__subtitle p1">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
                   vel gravida urna. Donec blandit sapien eu diam ullamcorper
                   euismod. Nam tempus pellentesque ligula ut aliquam.
                 </div>
-                @@include('html/elements/discover-more.html',{"class":
-                "second-news-section__discover-more", "text": "Discover more",
-                "href": "new.html"})
+                <div class="second-news-section__title">
+                  5 smart tips for productive collaboration with the designer
+                </div>
               </div>
               <div class="second-news-section__img-box">
                 <img src="@img/news/Rectangle 2.3 (4).jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="page-news__pages-navigation-section pages-navigation-section"
+        >
+          <div class="pages-navigation-section__conteiner">
+            <a class="icon-arrow-right" href="one-news.html"></a>
+            <a href="one-news.html">01</a>
+            <a href="one-news.html">02</a>
+            <a href="one-news.html">03</a>
+            <div class="pages-navigation-section__points">...</div>
+            <a href="one-news.html">15</a>
+            <a class="icon-arrow-right" href="one-news.html"></a>
+          </div>
+        </div>
+        <div class="page-news__last-news-section last-news-section">
+          <div class="last-news-section__background">
+            <img
+              class="last-news-section__img-background"
+              src="@img/news/Rectangle.jpg"
+              alt=""
+            />
+          </div>
+          <div class="last-news-section__content">
+            <div class="last-news-section__conteiner">
+              <h2 class="last-news-section__title">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </h2>
+              <div class="last-news-section__subtitle">
+                <div class="last-news-section__text p1">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus
+                  ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium
+                  velit.
+                </div>
+                <form
+                  action="#"
+                  method="get"
+                  class="last-news-section__email-box"
+                >
+                  <input type="email" name="email" placeholder="Email" id="" />
+                  <a
+                    href="#"
+                    class="last-news-section__email-submit icon-arrow-right"
+                  ></a>
+                </form>
               </div>
             </div>
           </div>

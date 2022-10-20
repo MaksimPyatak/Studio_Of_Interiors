@@ -407,3 +407,30 @@
     }
   }
 }
+
+@mixin header-black {
+  .header {
+    background: rgba(229, 229, 229, 0.75);
+    &__logo {
+      color: #000000;
+    }
+    .menu {
+      color: #000000;
+      &__burger-icon {
+        &:before,
+        &:after {
+          background-color: #080808;
+        }
+      }
+      &__button {
+        border: 1px solid #080808;
+      }
+      // &__list {
+      //   color: #000000;
+      // }
+      // &__heading {
+      //   color: #000000;
+      // }
+    }
+  }
+}

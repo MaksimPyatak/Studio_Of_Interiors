@@ -7,29 +7,29 @@ flsFunctions.isWebp();
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
 export const swiper = new Swiper('.first-section__swiper', {
-    modules: [Navigation, Pagination, Scrollbar],
-    // Optional parameters
-    // direction: 'vertical',
-    // loop: true,
+   modules: [Navigation, Pagination, Scrollbar],
+   // Optional parameters
+   // direction: 'vertical',
+   // loop: true,
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
+   // If we need pagination
+   pagination: {
+      el: '.swiper-pagination',
+   },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+   // Navigation arrows
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        dragSize: 37.22,
-    },
-    slidesPerView: 'auto',
-    spaceBetween: 0, 
+   // And if we need scrollbar
+   scrollbar: {
+      el: '.swiper-scrollbar',
+      dragSize: 37.22,
+   },
+   slidesPerView: 'auto',
+   spaceBetween: 0,
 });
 
 
@@ -37,21 +37,21 @@ export const swiper = new Swiper('.first-section__swiper', {
 
 const prevNomberSlide = document.querySelector('.swiper-button-prev');
 const nextNomberSlide = document.querySelector('.swiper-button-next');
- 
+
 let nomberSlide;
 let prev;
 let next;
 
 
 window.onload = function () {
-   
+
    //------Підключення  прелоудерa---------
-   
-   flsFunctions.preloaderF(); 
+
+   flsFunctions.preloaderF();
    //--------------------------------------
    let slider = document.querySelector('.swiper');
 
-   if (slider) {  
+   if (slider) {
       nomberSlide = swiper.activeIndex;
       prev = nomberSlide;
       if (prev < 10) {
@@ -59,12 +59,12 @@ window.onload = function () {
       } else {
          prevNomberSlide.textContent = prev;
       };
-    
-      next = nomberSlide+2;
+
+      next = nomberSlide + 2;
       if (next < 10) {
-       nextNomberSlide.textContent = "0" + next;
+         nextNomberSlide.textContent = "0" + next;
       } else {
-       nextNomberSlide.textContent = next;
+         nextNomberSlide.textContent = next;
       }
    }
 };
@@ -77,8 +77,8 @@ swiper.on('slideChange', function () {
    } else {
       prevNomberSlide.textContent = prev;
    };
-    
-   next = nomberSlide+2;
+
+   next = nomberSlide + 2;
    if (next < 10) {
       nextNomberSlide.textContent = "0" + next;
    } else {
@@ -105,3 +105,6 @@ import "./modules/pop-up.js";
 
 //Підключення файлу прелоудер
 //import "./modules/preloader.js";
+
+//Підключення файлу створення мініатюри попередньогоперегляду завантаженого фалу
+import "./modules/news.js";

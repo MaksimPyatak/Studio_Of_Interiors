@@ -1,93 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/head.html',{ "title":"Projects" })
+@@include('html/head.html',{ "title":"Projects" })
 
-  <body>
-    @@include('html/elements/preloader.html',{})
-    <div class="wrapper">
-      @@include('html/header.html',{})
-      <main>
-        <div class="page-news__first-news-section first-news-section">
-          <div class="first-news-section__title-box">
-            <h2 class="first-news-section__title">Our latest news</h2>
-            <div class="first-news-section__tabs">
-              <ul>
-                <li class="active-tab">All</li>
-                <li>Blog</li>
-                <li>News</li>
-                <li>Advice from the designer</li>
-              </ul>
-              <div
-                class="first-news-section__opening icon-down-arrowhead"
-              ></div>
+<body>
+  @@include('html/elements/preloader.html',{})
+  <div class="wrapper">
+    @@include('html/header.html',{})
+    <main>
+      <div class="page-news__first-news-section first-news-section">
+        <div class="first-news-section__title-box">
+          <h2 class="first-news-section__title">Our latest news</h2>
+          <div class="first-news-section__tabs tabs">
+            <ul class="tabs__list">
+              <li class="tabs__tab active-tab">All</li>
+              <li class="tabs__tab">Blog</li>
+              <li class="tabs__tab">News</li>
+              <li class="tabs__tab">Advice from the designer</li>
+            </ul>
+            <div class="first-news-section__opening icon-down-arrowhead"></div>
+          </div>
+        </div>
+      </div>
+      <div class="page-news__second-news-section second-news-section">
+        <div class="second-news-section__conteiner">
+          <div class="second-news-section__doblebox news-preview card">
+            <div class="second-news-section__content">
+              <div class="second-news-section__title">
+                5 smart tips for productive collaboration with the designer
+              </div>
+              <div class="second-news-section__subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                vel gravida urna. Donec blandit sapien eu diam ullamcorper
+                euismod. Nam tempus pellentesque ligula ut aliquam.
+              </div>
+              @@include('html/elements/discover-more.html',{"class":
+              "second-news-section__discover-more", "text": "Discover more",
+              "href": "new.html"})
+            </div>
+            <div class="second-news-section__img-box">
+              <img src="@img/news/Rectangle 2.3 (4).jpg" alt="" />
+            </div>
+          </div>
+          <div class="second-news-section__singlebox blog-preview  card">
+            <div class="second-news-section__content">
+              <a href="new.html" class="second-news-section__title">
+                Non-standard plinth options
+              </a>
+            </div>
+            <div class="second-news-section__img-box">
+              <img src="@img/news/Rectangle 2.5.jpg" alt="" />
+            </div>
+          </div>
+          <div class="second-news-section__singlebox blog-preview card">
+            <div class="second-news-section__content">
+              <a href="new.html" class="second-news-section__title">
+                Interior design, LCD Rybalsky
+              </a>
+            </div>
+            <div class="second-news-section__img-box">
+              <img src="@img/news/Rectangle 2.9.jpg" alt="" />
+            </div>
+          </div>
+          <div class="second-news-section__doblebox advice-preview card">
+            <div class="second-news-section__content">
+              <div class="second-news-section__title">
+                5 smart tips for productive collaboration with the designer
+              </div>
+              <div class="second-news-section__subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                vel gravida urna. Donec blandit sapien eu diam ullamcorper
+                euismod. Nam tempus pellentesque ligula ut aliquam.
+              </div>
+              @@include('html/elements/discover-more.html',{"class":
+              "second-news-section__discover-more", "text": "Discover more",
+              "href": "new.html"})
+            </div>
+            <div class="second-news-section__img-box">
+              <img src="@img/news/Rectangle 2.3 (4).jpg" alt="" />
             </div>
           </div>
         </div>
-        <div class="page-news__second-news-section second-news-section">
-          <div class="second-news-section__conteiner">
-            <div class="second-news-section__doblebox news-preview">
-              <div class="second-news-section__content">
-                <div class="second-news-section__title">
-                  5 smart tips for productive collaboration with the designer
-                </div>
-                <div class="second-news-section__subtitle">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                  vel gravida urna. Donec blandit sapien eu diam ullamcorper
-                  euismod. Nam tempus pellentesque ligula ut aliquam.
-                </div>
-                @@include('html/elements/discover-more.html',{"class":
-                "second-news-section__discover-more", "text": "Discover more",
-                "href": "new.html"})
-              </div>
-              <div class="second-news-section__img-box">
-                <img src="@img/news/Rectangle 2.3 (4).jpg" alt="" />
-              </div>
-            </div>
-            <div class="second-news-section__singlebox blog-preview">
-              <div class="second-news-section__content">
-                <a href="new.html" class="second-news-section__title">
-                  Non-standard plinth options
-                </a>
-              </div>
-              <div class="second-news-section__img-box">
-                <img src="@img/news/Rectangle 2.5.jpg" alt="" />
-              </div>
-            </div>
-            <div class="second-news-section__singlebox blog-preview">
-              <div class="second-news-section__content">
-                <a href="new.html" class="second-news-section__title">
-                  Interior design, LCD Rybalsky
-                </a>
-              </div>
-              <div class="second-news-section__img-box">
-                <img src="@img/news/Rectangle 2.9.jpg" alt="" />
-              </div>
-            </div>
-            <div class="second-news-section__doblebox advice-preview">
-              <div class="second-news-section__content">
-                <div class="second-news-section__title">
-                  5 smart tips for productive collaboration with the designer
-                </div>
-                <div class="second-news-section__subtitle">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                  vel gravida urna. Donec blandit sapien eu diam ullamcorper
-                  euismod. Nam tempus pellentesque ligula ut aliquam.
-                </div>
-                @@include('html/elements/discover-more.html',{"class":
-                "second-news-section__discover-more", "text": "Discover more",
-                "href": "new.html"})
-              </div>
-              <div class="second-news-section__img-box">
-                <img src="@img/news/Rectangle 2.3 (4).jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      @@include('html/footer.html',{})
-    </div>
-    @@include('html/elements/pop-up.html',{})
-    @@include('html/elements/pop-up2.html',{})
-    <script src="js/app.min.js"></script>
-  </body>
+      </div>
+    </main>
+    @@include('html/footer.html',{})
+  </div>
+  @@include('html/elements/pop-up.html',{})
+  @@include('html/elements/pop-up2.html',{})
+  <script src="js/app.min.js"></script>
+</body>
+
 </html>

@@ -93,3 +93,13 @@ export function burgerMenu() {
       })
    }
 }
+
+//----------Зміна стилю Header
+
+export function changeStyle() {
+   const title = document.querySelector('.page-news');
+   const header = document.querySelector('header');
+   if (title) {
+      header.classList.add("black")
+   }
+}

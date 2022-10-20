@@ -25,12 +25,6 @@
     width: 100%;
     max-width: 1440px;
   }
-
-  &__pages-navigation-section {
-  }
-
-  &__last-news-section {
-  }
 }
 .first-news-section {
   &__title-box {
@@ -263,12 +257,6 @@
     margin-top: 40px;
   }
 }
-.news-preview {
-}
-.blog-preview {
-}
-.advice-preview {
-}
 .pages-navigation-section {
   @include container;
   box-sizing: border-box;
@@ -388,6 +376,7 @@
     input {
       width: 100%;
       background: none;
+      color: #ffffff;
       //&:visited {
       //  background-color: none !important;
       //}

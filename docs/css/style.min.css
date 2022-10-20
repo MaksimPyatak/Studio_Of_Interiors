@@ -2756,19 +2756,19 @@ main {
   height: 1px;
 }
 
-.header {
+.header.black {
   background: rgba(229, 229, 229, 0.75);
 }
-.header__logo {
+.header.black__logo {
   color: #000000;
 }
-.header .menu {
+.header.black .menu {
   color: #000000;
 }
-.header .menu__burger-icon:before, .header .menu__burger-icon:after {
+.header.black .menu__burger-icon:before, .header.black .menu__burger-icon:after {
   background-color: #080808;
 }
-.header .menu__button {
+.header.black .menu__button {
   border: 1px solid #080808;
 }
 
@@ -2802,6 +2802,7 @@ main {
   width: 100%;
   max-width: 1440px;
 }
+
 .first-news-section__title-box {
   width: 72.64%;
   display: flex;
@@ -3233,6 +3234,7 @@ main {
 .last-news-section__email-box input {
   width: 100%;
   background: none;
+  color: #ffffff;
 }
 .last-news-section__email-box input::placeholder {
   color: #ffffff;

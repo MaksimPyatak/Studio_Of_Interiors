@@ -43,7 +43,13 @@ let prev;
 let next;
 
 
+import "./modules/change-style.js";
+
 window.onload = function () {
+
+   //----------Зміна стилю Header-------------
+
+   flsFunctions.changeStyle();
 
    //------Підключення  прелоудерa---------
 

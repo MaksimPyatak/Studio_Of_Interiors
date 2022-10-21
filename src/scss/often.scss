@@ -411,7 +411,7 @@
 @mixin header-black {
   .header.black {
     background: rgba(229, 229, 229, 0.75);
-    &__logo {
+    .header__logo {
       color: #000000;
     }
     .menu {

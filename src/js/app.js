@@ -43,7 +43,6 @@ let prev;
 let next;
 
 
-import "./modules/change-style.js";
 
 window.onload = function () {
 

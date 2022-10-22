@@ -208,25 +208,13 @@
   }
 }
 
-//@mixin menu-list($nomber-child: 1) {
-//  .menu__list {
-//    & li:nth-child($nomber-child) {
-//      display: none;
-//    }
-//    @media (max-width: 1024px) {
-//      & li:nth-child($nomber-child) {
-//        display: block;
-//        opacity: 0.5;
-//      }
-//    }
-//  }
-//}
-
 @mixin example-project {
   position: absolute;
   width: 100%;
   height: 100%;
   a {
+    max-width: 211px;
+    max-height: 273px;
     width: 14.65vw; //Забезпечити збереження пропорції через JS
     height: 18.96vw;
     position: absolute;
@@ -424,6 +412,29 @@
       }
       &__button {
         border: 1px solid #080808;
+      }
+    }
+  }
+  ._lock .header.black {
+    .header__logo {
+      @media (max-width: 1024px) {
+        color: #ffffff;
+      }
+    }
+    .menu {
+      &__burger-icon {
+        &:before,
+        &:after {
+          @media (max-width: 1024px) {
+            background-color: #ffffff;
+          }
+        }
+      }
+      &__button {
+        @media (max-width: 1024px) {
+          color: #ffffff;
+          border: 1px solid #ffffff;
+        }
       }
     }
   }

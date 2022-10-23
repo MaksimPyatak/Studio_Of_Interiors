@@ -16,6 +16,9 @@
     line-height: 13px;
     letter-spacing: 0.06em;
     color: #828282;
+    // @media (min-width: 601px) {
+    //   display: flex;
+    // }
     @media (max-width: 600px) {
       display: none;
       z-index: 2;
@@ -70,6 +73,8 @@
     }
   }
   &__select-tab {
+    height: 13px;
+    overflow: hidden;
     font-weight: 600;
     font-size: 11px;
     line-height: 13px;

@@ -51,8 +51,8 @@
   &__title {
     color: #080808;
   }
-  @import "tabs-anddropdown-list";
 }
+@import "tabs-anddropdown-list";
 .second-news-section {
   @include container;
   max-width: 1440px;

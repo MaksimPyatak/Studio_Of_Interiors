@@ -85,9 +85,10 @@ export function burgerMenu() {
 //----------Зміна стилю Header
 
 export function changeStyle() {
-   const title = document.querySelector('.page-news');
+   const pageNews = document.querySelector('.page-news');
+   const pageProjects = document.querySelector('.page-projects');
    const header = document.querySelector('header');
-   if (title) {
+   if (pageNews || pageProjects) {
       header.classList.add("black")
    }
 }

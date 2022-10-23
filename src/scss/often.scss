@@ -340,7 +340,7 @@
   }
 }
 
-@mixin footer($color-text: #828282, $color-slogan: #ffffff) {
+@mixin footer($color-text: #828282) {
   .footer {
     position: absolute;
     bottom: 0;
@@ -381,7 +381,7 @@
     &__lst-box {
       width: 84px;
       height: 26px;
-      color: $color-slogan;
+      color: #ffffff;
       display: grid;
       grid-template: repeat(2, 1fr) / 1fr;
     }
@@ -392,6 +392,11 @@
 
     &__slogan-lst {
       justify-self: end;
+    }
+  }
+  .footer.footer-black {
+    .footer__lst-box {
+      color: #080808;
     }
   }
 }
@@ -422,6 +427,7 @@
       }
     }
     .menu {
+      color: #ffffff;
       &__burger-icon {
         &:before,
         &:after {

@@ -1,0 +1,148 @@
+.page-one-news {
+  &__first-on-section {
+  }
+}
+.first-on-section {
+  width: 100%;
+
+  &__container {
+    width: var(--width-smaller-container);
+    margin: 208px auto 96px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1024px) {
+      margin: 162px auto 80px;
+    }
+    @media (max-width: 768px) {
+      margin: 138px auto 72px;
+    }
+    @media (max-width: 600px) {
+      margin: 116px auto 64px;
+      padding: 0 var(--pdng-conteiner);
+    }
+  }
+
+  &__title-box {
+  }
+
+  &__title {
+    width: 474px;
+    margin: 0 0 32px;
+    color: #080808;
+    @media (max-width: 1024px) {
+      width: 433px;
+    }
+    @media (max-width: 768px) {
+      width: 417px;
+      margin: 0 0 24px;
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    max-width: 715px;
+  }
+
+  &__share-box {
+    width: 121px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__share-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 170.66%;
+    color: #080808;
+  }
+
+  &__socials-box {
+    display: flex;
+    div {
+      width: 24px;
+      height: 24px;
+      margin: 0 8px 0 0;
+      //border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 9px;
+    }
+  }
+
+  &__facebook {
+    background: #3f5c95;
+  }
+
+  &__twiter {
+    background: #38a7de;
+  }
+
+  &__linkedin {
+    background: #0077b7;
+  }
+
+  &__link {
+    border: 1px solid rgba(8, 8, 8, 0.2);
+    color: #080808;
+  }
+}
+.page-one-news__first-img-box {
+  @include container;
+  max-height: 652px;
+  height: 45.28vw;
+  @media (max-width: 486px) {
+    height: 220px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.second-on-section {
+  width: 100%;
+  &__container {
+    width: var(--width-smaller-container);
+    margin: 96px auto;
+    @media (max-width: 1024px) {
+      margin: 88px auto;
+    }
+    @media (max-width: 768px) {
+      margin: 72px auto;
+    }
+    @media (max-width: 600px) {
+      margin: 64px auto;
+      padding: 0 var(--pdng-conteiner);
+    }
+  }
+
+  &__title {
+    max-width: 419px;
+    margin: 0 0 17px;
+    color: #080808;
+  }
+
+  &__content {
+    * {
+      max-width: 715px;
+    }
+    ol {
+      margin: 40px 0;
+      list-style-position: inside;
+      @media (max-width: 1024px) {
+        margin: 32px 0;
+      }
+    }
+  }
+}
+.p1 {
+}

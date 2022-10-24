@@ -20,34 +20,23 @@
       margin: 116px auto 64px;
     }
   }
-
-  &__second-projects-section {
-    width: 100%;
-    max-width: 1440px;
-  }
-
-  &__last-projects-section {
-  }
 }
 
 .first-projects-section {
   &__title-box {
-    width: 72.64%;
+    width: var(--width-smaller-container);
     display: flex;
     justify-content: space-between;
 
     @media (max-width: 1024px) {
-      width: 68.95%;
       flex-direction: column;
       justify-content: start;
       align-items: start;
       gap: 32px;
     }
     @media (max-width: 768px) {
-      width: 67.71%;
     }
     @media (max-width: 600px) {
-      width: 100%;
       padding: 0 var(--pdng-conteiner);
       gap: 24px;
     }
@@ -75,6 +64,7 @@
 
 .second-projects-section {
   @include container;
+  width: 100%;
   max-width: 1440px;
   box-sizing: border-box;
   .not-active {

@@ -137,7 +137,6 @@
 
   &__button {
     @include button(#ffffff, #080808);
-    //margin-top: 41px;
 
     @media (max-width: 1024px) {
       height: 42px;

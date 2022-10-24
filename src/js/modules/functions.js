@@ -88,7 +88,8 @@ export function changeStyle() {
    const pageNews = document.querySelector('.page-news');
    const pageProjects = document.querySelector('.page-projects');
    const header = document.querySelector('header');
-   if (pageNews || pageProjects) {
+   const pageOneNews = document.querySelector('.page-one-news');
+   if (pageNews || pageProjects || pageOneNews) {
       header.classList.add("black")
    }
 }

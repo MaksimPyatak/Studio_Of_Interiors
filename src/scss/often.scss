@@ -16,12 +16,11 @@
 @mixin button(
   $background: none,
   $color: inherit,
-  $border-width: 1px,
   $border-color: rgba(253, 253, 253, 0.32)
 ) {
   width: 183px;
   height: 48px;
-  border: $border-width solid $border-color;
+  border: 1px solid $border-color;
   background: $background;
   display: flex;
   font-family: "Montserrat";
@@ -398,6 +397,9 @@
     .footer__lst-box {
       color: #080808;
     }
+  }
+  .footer.footer-none {
+    display: none;
   }
 }
 

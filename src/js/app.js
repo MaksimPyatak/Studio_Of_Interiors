@@ -4,13 +4,12 @@ import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();
 
 
+//Слайдер  домашньої сторінки
+
 import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 
 export const swiper = new Swiper('.first-section__swiper', {
    modules: [Navigation, Pagination, Scrollbar],
-   // Optional parameters
-   // direction: 'vertical',
-   // loop: true,
 
    // If we need pagination
    pagination: {
@@ -34,15 +33,19 @@ export const swiper = new Swiper('.first-section__swiper', {
 
 
 // Нумерація навігації Swiper
-
-const prevNomberSlide = document.querySelector('.swiper-button-prev');
-const nextNomberSlide = document.querySelector('.swiper-button-next');
+const firstSlider = document.querySelector('.first-section__swiper');
+let prevNomberSlide;
+let nextNomberSlide;
+if (firstSlider) {
+   console.log(firstSlider);
+    prevNomberSlide = firstSlider.querySelector('.swiper-button-prev');
+    nextNomberSlide = firstSlider.querySelector('.swiper-button-next');
+   
+}
 
 let nomberSlide;
 let prev;
 let next;
-
-
 
 window.onload = function () {
 
@@ -54,7 +57,7 @@ window.onload = function () {
 
    flsFunctions.preloaderF();
    //--------------------------------------
-   let slider = document.querySelector('.swiper');
+   let slider = document.querySelector('.first-section__swiper');
 
    if (slider) {
       nomberSlide = swiper.activeIndex;
@@ -92,6 +95,7 @@ swiper.on('slideChange', function () {
 });
 
 
+
 //!!Підключення файлу з бургер-меню
 //import "./modules/burger-menu.js";
 flsFunctions.burgerMenu();
@@ -108,8 +112,15 @@ import "./modules/pop-up.js";
 //Підключення файлу відправки форми без перезавантаження вікна
 //import "./modules/sending-data.js";
 
-//Підключення файлу прелоудер
-//import "./modules/preloader.js";
+//Підключення файлу one-news
+import "./modules/one-news.js";
 
 //Підключення файлу створення мініатюри попередньогоперегляду завантаженого фалу
 import "./modules/news.js";
+
+//Підключення слайдера для сторінки one-news 
+
+const swiperOneNews = new Swiper('.last-on-section__swiper', {  
+   slidesPerView: 'auto',
+   //spaceBetween: 48, //????????
+});

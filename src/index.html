@@ -44,22 +44,24 @@
                 </div>
               </div>
             </div>
-            <div class="scrollbar-navigation">
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
+            <div class="first-section__container">
+              <div class="scrollbar-navigation">
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
 
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
-              <div class="swiper-button-next"></div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+              <h1 class="first-section__slogan">Thoughtful making of space</h1>
+              <!-- Discaver more -->
+              @@include('html/elements/discover-more.html',{"class":
+              "first-section__discover-more", "text": "Discover more", "href":
+              "one-projects.html"})
+              <!-- data-box -->
+              @@include('html/elements/data-box.html',{"class":
+              "first-section__data-box"})
             </div>
-            <h1 class="first-section__slogan">Thoughtful making of space</h1>
-            <!-- Discaver more -->
-            @@include('html/elements/discover-more.html',{"class":
-            "first-section__discover-more", "text": "Discover more", "href":
-            "one-projects.html"})
-            <!-- data-box -->
-            @@include('html/elements/data-box.html',{"class":
-            "first-section__data-box"})
             <div class="first-section__column">
               <div class="first-section__next">
                 <a class="first-section__next-link" href="one-projects.html"

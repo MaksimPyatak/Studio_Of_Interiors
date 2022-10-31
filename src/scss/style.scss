@@ -88,6 +88,7 @@ main {
   }
 
   &__swiper-wrapper {
+    position: absolute;
     height: 100%;
   }
 
@@ -179,6 +180,10 @@ main {
 }
 
 .first-section {
+  &__container {
+    position: relative;
+    @include container;
+  }
   &__slogan {
     position: absolute;
     width: 551px;
@@ -301,8 +306,10 @@ main {
 
 .second-section {
   width: 100%;
+  max-width: 1440px;
   max-height: 1358px;
   height: 94.31vw;
+  margin: 0 auto;
   padding-top: 9.73%;
   padding-bottom: 9.73%;
   display: grid;

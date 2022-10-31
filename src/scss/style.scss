@@ -167,9 +167,6 @@ main {
 .swiper-horizontal > .swiper-scrollbar,
 .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: static;
-  //  z-index: 5;
-  //  top: 61.83%;
-  //  left: 72%;
   width: 148px;
   height: 1px;
   background: rgba(255, 255, 255, 0.32);
@@ -178,7 +175,6 @@ main {
   }
 }
 .swiper-scrollbar-drag {
-  //  z-index: 5;
   background: rgba(255, 255, 255);
 }
 
@@ -865,6 +861,7 @@ main {
 @import "one-news";
 @import "projects";
 @import "one-project";
+@import "about";
 @import "email_section";
 
 @import "contacts";

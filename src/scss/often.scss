@@ -40,19 +40,9 @@
 }
 // Текст з двома лініями з двох боків -ТЕКСТ----
 //Додаємо в основний блок
-@mixin discover-more(
-  $color: inherit,
-  $background: rgba(255, 255, 255, 0.4),
-  //  $position: absolute,
-  //  $top: 453px,
-  //  $left: 263px
-) {
-  //  position: $position;
+@mixin discover-more($color: inherit, $background: rgba(255, 255, 255, 0.4)) {
   width: fit-content;
   height: 13px;
-  //  top: $top;
-  //  left: $left;
-
   .discover-more__link {
     position: relative;
     font-size: 10px;
@@ -96,7 +86,7 @@
 
 @mixin data-box() {
   .data-box {
-    width: 100%; //634px
+    width: 100%;
     display: flex;
     font-weight: 600;
     font-size: 11px;

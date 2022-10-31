@@ -6,7 +6,10 @@
     @@include('html/elements/preloader.html',{})
     <div class="wrapper">
       @@include('html/header.html',{})
-      <main></main>
+      <main class="page-contacts">
+        @@include('html/elements/contact.html',{"class":
+        "page-contacts__first-section"})
+      </main>
       @@include('html/footer.html',{})
     </div>
     @@include('html/elements/pop-up.html',{})

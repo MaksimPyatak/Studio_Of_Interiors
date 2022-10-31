@@ -1,0 +1,19 @@
+.page-contacts {
+  .contacts {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__conteiner {
+      max-width: 1440px;
+      width: 100%;
+      height: auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      box-sizing: border-box;
+    }
+    &__vertical-contacts-box {
+      display: none;
+    }
+  }
+}

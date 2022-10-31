@@ -6242,7 +6242,7 @@ main {
   width: max-content;
   justify-self: end;
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .contacts__email-box {
     grid-column: 3/4;
     justify-self: start;
@@ -6300,7 +6300,7 @@ main {
     height: 42px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .contacts__button {
     grid-column: 1/2;
     grid-row: 2/3;
@@ -6315,6 +6315,24 @@ main {
   .contacts__button {
     margin-top: 8px;
   }
+}
+
+.page-contacts .contacts {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page-contacts .contacts__conteiner {
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+.page-contacts .contacts__vertical-contacts-box {
+  display: none;
 }
 
 .footer {

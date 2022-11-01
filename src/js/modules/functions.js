@@ -16,48 +16,80 @@ export function isWebp() {
 }
 //------------------------------
 //Підключення  прелоудерa
+
 export function preloaderF() {
    const preloader = document.querySelector('.preloader');
    if (preloader) {
-      
-   const delay = 2000; //!Затримка
-   const delayTransition = delay - 500;
-   const loadingTime = delayTransition - 500;
-   loadingIllustration(loadingTime);
-   window.setTimeout(function () {
-      preloader.classList.add('loaded_hiding');
-   }, delayTransition);
-   window.setTimeout(function () {
-      preloader.classList.add('loaded');
-      preloader.classList.remove('loaded_hiding');
-   }, delay);
-}
-}
+      const mediaFiles = document.querySelectorAll('img, video');
+      let i = 0;
+      console.log(mediaFiles.length);
+      const variableElement = document.querySelector('.preloader__variable-element');
+      variableElement.textContent = `0%`;
 
-//Відсоток завантаження для прелоудера
-export function loadingIllustration(loadingTime) {
-   const variableElement = document.querySelector('.preloader__variable-element');
-   let percent = 0;
-   let delayStep = (loadingTime - 500) / 5;
-   variableElement.textContent = `${percent}%`;
-   let text = variableElement.textContent;
+      Array.from(mediaFiles).forEach((file, index) => {
+         file.onload = () => {
+            console.log(file);
+            i++;
+            
+            let percent = ((i * 100) / mediaFiles.length).toFixed(1);
+            console.log(i);
+            variableElement.textContent = `${percent}%`;
 
-   let timeout;
-   timeout = setInterval(pageLoadin, delayStep);
-
-  
-   function pageLoadin() {
-      percent = percent + 20;
-      variableElement.style.marginLeft = "5";
-      variableElement.textContent = `   ${percent}%`;
-      let text = variableElement.textContent;
-      if (percent == 100) {
-         clearInterval(timeout);
-         variableElement.classList.remove('space');
-         variableElement.textContent = `LIGHT`;         
-      }
+            if (i === mediaFiles.length) {
+                  preloader.classList.add('loaded_hiding');
+               window.setTimeout(function () {
+                  preloader.classList.add('loaded');
+                  preloader.classList.remove('loaded_hiding');
+               }, 500);
+            }
+         }
+      })
    }
 }
+//!!Затримка по часу
+//export function preloaderF() {
+//   const preloader = document.querySelector('.preloader');
+//   if (preloader) {
+      
+//   const delay = 2000; //!Затримка
+//   const delayTransition = delay - 500;
+//   const loadingTime = delayTransition - 500;
+//   loadingIllustration(loadingTime);
+   //window.setTimeout(function () {
+   //   preloader.classList.add('loaded_hiding');
+   //}, delayTransition);
+   //window.setTimeout(function () {
+   //   preloader.classList.add('loaded');
+   //   preloader.classList.remove('loaded_hiding');
+   //}, delay);
+//}
+//}
+
+//Відсоток завантаження для прелоудера
+//export 
+//function loadingIllustration(loadingTime) {
+//   const variableElement = document.querySelector('.preloader__variable-element');
+//   let percent = 0;
+//   let delayStep = (loadingTime - 500) / 5;
+//   variableElement.textContent = `${percent}%`;
+//   let text = variableElement.textContent;
+
+//   let timeout;
+//   timeout = setInterval(pageLoadin, delayStep);
+
+  
+//   function pageLoadin() {
+//      percent = percent + 20;
+//      variableElement.style.marginLeft = "5";
+//      variableElement.textContent = `   ${percent}%`;
+//      let text = variableElement.textContent;
+//      if (percent == 100) {
+//         clearInterval(timeout);
+//         variableElement.classList.remove('space');
+//         variableElement.textContent = `LIGHT`;         
+//      }
+//   }
+//}
 
 //----------------------------------
 //Підключення файлу з бургер-меню

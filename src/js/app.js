@@ -111,15 +111,17 @@ let nomberSlide;
 let prev;
 let next;
 
+   //------Підключення  прелоудерa---------
+   //flsFunctions.preloaderF();
+   document.addEventListener('DOMContentLoaded', flsFunctions.preloaderF());
+   //
+
 window.onload = function () {
 
    //----------Зміна стилю Header-------------
 
    flsFunctions.changeStyle();
 
-   //------Підключення  прелоудерa---------
-
-   flsFunctions.preloaderF();
    //--------------------------------------
    let slider = document.querySelector('.first-section__swiper');
    //let sliderAbout = document.querySelector('.second-about-section__swiper');

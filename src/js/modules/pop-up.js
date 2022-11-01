@@ -42,6 +42,8 @@ function popupOpen(curentPopup) {
          if (form) {
             let error = formValidate();
             if (error === 0) {
+               form.reset();//Очистка форми
+               prviewFileRemove();//Видалення мініатюри файла
                popupClose(popupActive, false)
             } else {
                alert('Fill in the required fields!');
@@ -149,4 +151,12 @@ function formRemoveError(input) {
 }
 function emailTest(input) {
    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
+
+//Видалення мініатюри файла
+function prviewFileRemove () {
+   const preview = document.querySelector('.popup__preview');
+   while (preview.firstChild) {
+      preview.removeChild(preview.firstChild);
+   }
 }

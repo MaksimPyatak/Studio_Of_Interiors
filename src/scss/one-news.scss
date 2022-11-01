@@ -302,7 +302,7 @@
 
   &__swiper-slide {
     width: 316px;
-    height: 475px;
+    height: 478px;
     margin: 0 48px 0 0;
     display: flex;
     flex-direction: column;
@@ -325,7 +325,17 @@
 
   &__img {
     width: 100%;
+    height: 385px;
     flex: 1 1 auto;
+    @media (max-width: 1024px) {
+      height: 357px;
+    }
+    @media (max-width: 768px) {
+      height: 445px;
+    }
+    @media (max-width: 600px) {
+      height: 351px;
+    }
     img {
       width: 100%;
       height: 100%;

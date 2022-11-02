@@ -35,11 +35,19 @@ export function preloaderF() {
             console.log(i);
             variableElement.textContent = `${percent}%`;
             if (percent == 100) {
-               //clearInterval(timeout);
+               clearInterval(timeout);
                variableElement.classList.remove('space');
                variableElement.textContent = `LIGHT`;         
             }
-
+            if (i === mediaFiles.length) {
+               window.setTimeout(function () {
+                  preloader.classList.add('loaded_hiding');
+               }, 500);
+               window.setTimeout(function () {
+                  preloader.classList.add('loaded');
+                  preloader.classList.remove('loaded_hiding');
+               }, 1000);
+            }
             
          }
       })
@@ -52,11 +60,13 @@ export function downloadedWindow() {
    console.log(preloader);
    if (preloader) {
       
-         preloader.classList.add('loaded_hiding');
+         window.setTimeout(function () {
+            preloader.classList.add('loaded_hiding');
+         }, 500);
          window.setTimeout(function () {
             preloader.classList.add('loaded');
             preloader.classList.remove('loaded_hiding');
-         }, 500);
+         }, 1000);
       
    }
    

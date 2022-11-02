@@ -118,6 +118,10 @@ let next;
 
 window.onload = function () {
 
+   //Приховання прелоудера
+   flsFunctions.downloadedWindow()
+   console.log('go');
+
    //----------Зміна стилю Header-------------
 
    flsFunctions.changeStyle();

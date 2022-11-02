@@ -25,8 +25,8 @@ export function preloaderF() {
       console.log(mediaFiles.length);
       const variableElement = document.querySelector('.preloader__variable-element');
       variableElement.textContent = `0%`;
-
-      Array.from(mediaFiles).forEach((file, index) => {
+      //Array.from(mediaFiles)
+      mediaFiles.forEach((file) => {//, index
          file.onload = () => {
             console.log(file);
             i++;
@@ -34,18 +34,34 @@ export function preloaderF() {
             let percent = ((i * 100) / mediaFiles.length).toFixed(1);
             console.log(i);
             variableElement.textContent = `${percent}%`;
-
-            if (i === mediaFiles.length) {
-                  preloader.classList.add('loaded_hiding');
-               window.setTimeout(function () {
-                  preloader.classList.add('loaded');
-                  preloader.classList.remove('loaded_hiding');
-               }, 500);
+            if (percent == 100) {
+               clearInterval(timeout);
+               variableElement.classList.remove('space');
+               variableElement.textContent = `LIGHT`;         
             }
+
+            
          }
       })
    }
 }
+
+//Приховання прелоудера
+export function downloadedWindow() {
+   const preloader = document.querySelector('.preloader');
+   console.log(preloader);
+   if (preloader) {
+      
+         preloader.classList.add('loaded_hiding');
+         window.setTimeout(function () {
+            preloader.classList.add('loaded');
+            preloader.classList.remove('loaded_hiding');
+         }, 500);
+      
+   }
+   
+}
+
 //!!Затримка по часу
 //export function preloaderF() {
 //   const preloader = document.querySelector('.preloader');
@@ -83,11 +99,11 @@ export function preloaderF() {
 //      variableElement.style.marginLeft = "5";
 //      variableElement.textContent = `   ${percent}%`;
 //      let text = variableElement.textContent;
-//      if (percent == 100) {
-//         clearInterval(timeout);
-//         variableElement.classList.remove('space');
-//         variableElement.textContent = `LIGHT`;         
-//      }
+      //if (percent == 100) {
+      //   clearInterval(timeout);
+      //   variableElement.classList.remove('space');
+      //   variableElement.textContent = `LIGHT`;         
+      //}
 //   }
 //}
 

@@ -35,7 +35,7 @@ export function preloaderF() {
             console.log(i);
             variableElement.textContent = `${percent}%`;
             if (percent == 100) {
-               clearInterval(timeout);
+               //clearInterval(timeout);
                variableElement.classList.remove('space');
                variableElement.textContent = `LIGHT`;         
             }

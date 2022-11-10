@@ -6346,9 +6346,15 @@ main {
 
 .page-contacts .contacts {
   height: 100vh;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (max-width: 600px) {
+  .page-contacts .contacts {
+    min-height: 846px;
+  }
 }
 .page-contacts .contacts__conteiner {
   max-width: 1440px;
